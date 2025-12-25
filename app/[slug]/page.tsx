@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import data from '@/data/pseo.json'
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const [subjectId, ...rest] = params.slug.split('-assignment-help-')
+    const { slug } = await params
+    const [subjectId, ...rest] = slug.split('-assignment-help-')
     const city = rest.join(' ').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
     const subject = data.subjects.find(s => s.id === subjectId)
 
@@ -28,8 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-export default function PSEOPage({ params }: Props) {
-    const [subjectId, ...rest] = params.slug.split('-assignment-help-')
+export default async function PSEOPage({ params }: Props) {
+    const { slug } = await params
+    const [subjectId, ...rest] = slug.split('-assignment-help-')
     const city = rest.join(' ').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
     const subject = data.subjects.find(s => s.id === subjectId)
 
