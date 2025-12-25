@@ -1,0 +1,108 @@
+:root {
+  --primary: #001F3F; /* Navy Blue */
+  --secondary: #D4AF37; /* Royal Gold */
+  --accent: #E5E5E5;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --bg-main: #FFFFFF;
+  --bg-alt: #F8F9FA;
+  --success: #28a745;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background: var(--bg-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #003366;
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-gold:hover {
+  background: #C5A028;
+  color: white;
+}
+
+/* Section Styling */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 31, 63, 0.9), rgba(0, 31, 63, 0.9)), url('https://images.unsplash.com/photo-1523050853063-bd388f9f79b5?auto=format&fit=crop&q=80') center/cover;
+  color: white;
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-2 { margin-bottom: 2rem; }
+.flex { display: flex; gap: 1rem; flex-wrap: wrap; }
+.justify-center { justify-content: center; }

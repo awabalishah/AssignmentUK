@@ -1,0 +1,128 @@
+{
+  "cities": [
+    "London",
+    "Birmingham",
+    "Manchester",
+    "Leeds",
+    "Glasgow",
+    "Liverpool",
+    "Bristol",
+    "Sheffield",
+    "Edinburgh",
+    "Leicester",
+    "Coventry",
+    "Belfast",
+    "Nottingham",
+    "Newcastle upon Tyne",
+    "Southampton",
+    "Reading",
+    "Derby",
+    "Oxford",
+    "Cambridge",
+    "Brighton"
+  ],
+  "universities": [
+    "University of Oxford",
+    "University of Cambridge",
+    "Imperial College London",
+    "UCL (University College London)",
+    "University of Manchester",
+    "King's College London",
+    "University of Edinburgh",
+    "University of Warwick",
+    "University of Leeds",
+    "University of Birmingham",
+    "University of Bristol",
+    "University of Sheffield"
+  ],
+  "subjects": [
+    {
+      "id": "nursing",
+      "name": "Nursing",
+      "keywords": [
+        "Nursing Care Plan",
+        "Healthcare Ethics",
+        "Pharmacology",
+        "Patient Safety"
+      ],
+      "description": "Expert nursing assignment help for UK students, covering NMC standards and clinical practice guidelines."
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "keywords": [
+        "Corporate Law",
+        "Criminal Law",
+        "Civil Litigation",
+        "International Law"
+      ],
+      "description": "Professional law assignment writing services specializing in UK Common Law and EU regulations."
+    },
+    {
+      "id": "programming",
+      "name": "Programming",
+      "keywords": [
+        "Python",
+        "Java",
+        "Web Development",
+        "Data Structures"
+      ],
+      "description": "Advanced programming assignment help with clean code, documentation, and logic explanation."
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer Science Exams",
+      "keywords": [
+        "Algorithm Design",
+        "Cybersecurity",
+        "Database Management",
+        "Software Engineering"
+      ],
+      "description": "Premium preparation and assistance for Computer Science exams, focusing on UK university curriculum standards."
+    },
+    {
+      "id": "business-writing",
+      "name": "Business Writing",
+      "keywords": [
+        "Report Writing",
+        "Business Proposals",
+        "Communication Strategy",
+        "Executive Summaries"
+      ],
+      "description": "Professional business writing services for students and professionals across the UK."
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "keywords": [
+        "Microeconomics",
+        "Macroeconomics",
+        "Econometrics",
+        "Development Economics"
+      ],
+      "description": "Academic support for Economics assignments, featuring deep data analysis and theoretical application."
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "keywords": [
+        "SPSS Analysis",
+        "Probability",
+        "Regression Models",
+        "Data Interpretation"
+      ],
+      "description": "Expert statistics assignment help using modern tools and rigorous mathematical methodologies."
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "keywords": [
+        "Digital Marketing",
+        "Consumer Behavior",
+        "Brand Management",
+        "Market Research"
+      ],
+      "description": "Creative and strategic marketing assignment writing with a focus on UK and Global market trends."
+    }
+  ]
+}
