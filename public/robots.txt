@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://assignmentuk.vercel.app/sitemap.xml
