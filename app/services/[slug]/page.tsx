@@ -56,6 +56,29 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         .filter(s => s.subject === service.subject && s.slug !== service.slug)
         .slice(0, 3);
 
+    const faqLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": `Is your ${service.subject} service at ${service.university} confidential?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `Yes, we provide 100% confidential support. All communication is encrypted, and your data is never shared with ${service.university} or any third party.`
+                }
+            },
+            {
+                "@type": "Question",
+                "name": `How do you ensure correct ${service.referencing} referencing?`,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": `Our writers are specialists in ${service.referencing} standards. Every ${service.type} is double-checked by our quality team to ensure every citation meets the specific manual requirements of your department.`
+                }
+            }
+        ]
+    };
+
     const breadcrumbLd = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -104,6 +127,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
             />
             <script
                 type="application/ld+json"
@@ -198,6 +225,66 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
             </section>
 
+            {/* Process Section: How It Works */}
+            <section className="section" style={{ borderTop: '1px solid #eee' }}>
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <h2 className="text-3xl mt-0">Our 4-Step Academic Success Process</h2>
+                        <p className="text-muted">How we ensure your {service.subject} assignment meets {service.university} standards</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: '2rem' }}>
+                        {[
+                            { step: '01', title: 'Consultation', desc: 'Brief our {service.subject} lead on your specific module requirements.' },
+                            { step: '02', title: 'Expert Matching', desc: 'We assign a PhD writer familiar with {service.university} marking rubrics.' },
+                            { step: '03', title: 'Draft Review', desc: 'Receive an initial draft for feedback and alignment check.' },
+                            { step: '04', title: 'Final Delivery', desc: 'Get your polished, {service.referencing}-referenced work with a Turnitin report.' }
+                        ].map((s, idx) => (
+                            <div key={idx} style={{ position: 'relative', padding: '1rem' }}>
+                                <div className="text-4xl font-black text-gradient-gold" style={{ opacity: 0.2, marginBottom: '-1rem' }}>{s.step}</div>
+                                <h4 className="text-xl mb-1">{s.title.replace('{service.subject}', service.subject)}</h4>
+                                <p className="text-sm text-muted">{s.desc.replace('{service.subject}', service.subject).replace('{service.university}', service.university).replace('{service.referencing}', service.referencing)}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison Table */}
+            <section className="section section-alt" style={{ borderTop: '1px solid #eee' }}>
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <h2 className="text-3xl mt-0">Why We Outperform Competitors</h2>
+                        <p className="text-muted">A direct comparison of our standards vs. generic writing services</p>
+                    </div>
+                    <div className="glass-card" style={{ padding: 0, overflowX: 'auto' }}>
+                        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+                            <thead>
+                                <tr style={{ background: 'var(--navy-gradient)', color: '#fff' }}>
+                                    <th style={{ padding: '1.5rem', textAlign: 'left' }}>Feature</th>
+                                    <th style={{ padding: '1.5rem', textAlign: 'center' }}>AssignUK</th>
+                                    <th style={{ padding: '1.5rem', textAlign: 'center' }}>Generic Sites</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    { f: 'Writer Origin', us: 'UK-Based Scholars', them: 'Offshore/Freelance' },
+                                    { f: 'Referencing Accuracy', us: 'Perfect ' + service.referencing, them: 'Generic Styles' },
+                                    { f: 'Turnitin Report', us: 'Included Free', them: 'Extra Charge' },
+                                    { f: 'Free Revisions', us: 'Unlimited', them: 'Limited to 7 days' },
+                                    { f: 'University Knowledge', us: service.university + ' Specific', them: 'General Theory Only' }
+                                ].map((row, i) => (
+                                    <tr key={i} style={{ borderBottom: '1px solid #eee' }}>
+                                        <td style={{ padding: '1.2rem', fontWeight: 'bold' }}>{row.f}</td>
+                                        <td style={{ padding: '1.2rem', textAlign: 'center', color: 'var(--success)', fontWeight: 'bold' }}>{row.us}</td>
+                                        <td style={{ padding: '1.2rem', textAlign: 'center', opacity: 0.6 }}>{row.them}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
             {/* Semantic SEO: Top Schools for [Subject] */}
             {relatedSchools.length > 0 && (
                 <section className="section" style={{ background: '#fff' }}>
@@ -222,6 +309,41 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     </div>
                 </section>
             )}
+
+            {/* FAQ Section */}
+            <section className="section" style={{ borderTop: '1px solid #eee' }}>
+                <div className="container" style={{ maxWidth: '800px' }}>
+                    <div className="text-center mb-3">
+                        <h2 className="text-3xl mt-0">Frequently Asked Questions</h2>
+                        <p className="text-muted">Common queries from {service.university} students</p>
+                    </div>
+                    <div style={{ display: 'grid', gap: '1.5rem' }}>
+                        {[
+                            {
+                                q: `Is using this ${service.type} service legal?`,
+                                a: `Absolutely. We provide academic research and model writing assistance that serves as a study guide. It is intended to help you understand complex ${service.subject} topics and improve your own writing standards.`
+                            },
+                            {
+                                q: `Can I request a writer who knows ${service.university} specifically?`,
+                                a: `Yes. We prioritize assigning writers who have either graduated from or have extensive experience with ${service.university}'s specific academic expectations and marking rubrics.`
+                            },
+                            {
+                                q: `What if I need a revision for my ${service.subject} assignment?`,
+                                a: `We offer unlimited free revisions for 14 days after delivery. Simply highlight the areas needing adjustment, and your writer will refine them until they meet your satisfaction.`
+                            }
+                        ].map((faq, idx) => (
+                            <div key={idx} className="glass-card" style={{ padding: '2rem' }}>
+                                <h4 className="text-lg mb-1" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                    <span style={{ color: 'var(--secondary)', fontWeight: 'bold' }}>Q:</span> {faq.q}
+                                </h4>
+                                <p className="text-sm text-muted mb-0">
+                                    <span style={{ color: 'var(--success)', fontWeight: 'bold', marginRight: '0.5rem' }}>A:</span> {faq.a}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Internal Linking: More in [City] */}
             {relatedInCity.length > 0 && (

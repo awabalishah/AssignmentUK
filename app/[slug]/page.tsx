@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import data from '@/data/pseo.json'
-import { GraduationCap, Users, Star, ShieldCheck } from 'lucide-react'
+import { GraduationCap, Users, Star, ShieldCheck, MapPin } from 'lucide-react'
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -124,6 +124,10 @@ export default async function PSEOPage({ params }: Props) {
                                 <li className="flex items-center" style={{ gap: '0.75rem' }}>
                                     <Star size={20} color="var(--secondary)" fill="var(--secondary)" />
                                     <span><strong>Average Rating:</strong> 4.9/5</span>
+                                </li>
+                                <li className="flex items-center" style={{ gap: '0.75rem' }}>
+                                    <MapPin size={20} color="var(--secondary)" />
+                                    <span><strong>Local Support:</strong> Near {city} Central & Student Districts</span>
                                 </li>
                                 <li className="flex items-center" style={{ gap: '0.75rem' }}>
                                     <ShieldCheck size={20} color="var(--success)" />
