@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://assignment-uk-five.vercel.app'),
   title: 'Expert Assignment Writing Services UK | Top Grades Guaranteed',
   description: 'Specialized assignment help for UK students in Nursing, Law, Programming, and MBA. 100% Plagiarism-free and on-time delivery.',
 }

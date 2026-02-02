@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 1. University Pages
     const uniUrls = pseoData.universities.map((uni) => ({
-        url: `${baseUrl}/uni/${encodeURIComponent(uni.toLowerCase().replace(/\s+/g, '-'))}`,
+        url: `${baseUrl}/uni/${uni.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.7,

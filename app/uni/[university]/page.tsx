@@ -5,14 +5,16 @@ import { GraduationCap, MapPin, CheckCircle2 } from 'lucide-react'
 
 export async function generateStaticParams() {
     return data.universities.map((uni) => ({
-        university: encodeURIComponent(uni.toLowerCase().replace(/\s+/g, '-')),
+        university: uni.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
     }))
 }
 
 export default async function UniversityPage({ params }: { params: Promise<{ university: string }> }) {
     const { university } = await params;
-    const uniName = decodeURIComponent(university).replace(/-/g, ' ');
-    const realUni = data.universities.find(u => u.toLowerCase() === uniName.toLowerCase());
+
+    const realUni = data.universities.find(u =>
+        u.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') === university
+    );
 
     if (!realUni) {
         notFound();

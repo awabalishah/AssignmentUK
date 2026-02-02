@@ -32,6 +32,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: service.title,
         description: service.description,
+        alternates: {
+            canonical: `/services/${service.slug}`
+        }
     }
 }
 
@@ -47,6 +50,36 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     const relatedInCity = (servicesData as Service[])
         .filter(s => s.city === service.city && s.slug !== service.slug)
         .slice(0, 3);
+
+    // Semantic SEO: Find 3 other schools for the same subject
+    const relatedSchools = (servicesData as Service[])
+        .filter(s => s.subject === service.subject && s.slug !== service.slug)
+        .slice(0, 3);
+
+    const breadcrumbLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://assignment-uk-five.vercel.app"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": service.subject,
+                "item": `https://assignment-uk-five.vercel.app/subject/${service.subject.toLowerCase()}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": service.title,
+                "item": `https://assignment-uk-five.vercel.app/services/${service.slug}`
+            }
+        ]
+    };
 
     const schemaOrg = {
         "@context": "https://schema.org",
@@ -70,6 +103,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <main>
             <script
                 type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+            />
+            <script
+                type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
             />
             {/* SEO Optimized Hero Section */}
@@ -81,7 +118,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 <GraduationCap size={20} />
                                 <span className="text-xs font-bold uppercase tracking-wider">{service.university} Experts</span>
                             </div>
-                            <h1 className="text-4xl md:text-5xl mb-2">{service.title}</h1>
+                            <h1 className="text-4xl md:text-5xl mb-1">{service.title}</h1>
+                            <div className="flex items-center mb-2" style={{ gap: '0.5rem', opacity: 0.8 }}>
+                                <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 'bold', color: '#fff' }}>UK</div>
+                                <span className="text-xs">Identified & Verified by <strong>Dr. Alistair H.</strong> (Subject Lead)</span>
+                            </div>
                             <p className="text-lg text-muted mb-3">
                                 Professional <span className="font-bold">{service.type}</span> support for students in <span className="font-bold">{service.city}</span>. Specialized in <span className="text-gradient-gold font-bold">{service.referencing}</span> standards.
                             </p>
@@ -156,6 +197,31 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     </div>
                 </div>
             </section>
+
+            {/* Semantic SEO: Top Schools for [Subject] */}
+            {relatedSchools.length > 0 && (
+                <section className="section" style={{ background: '#fff' }}>
+                    <div className="container">
+                        <div className="mb-3">
+                            <h2 className="text-2xl mb-1 mt-0">Elite Support for {service.subject}</h2>
+                            <p className="text-muted">Specialized assistance for {service.subject} students at other leading UK institutions</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3">
+                            {relatedSchools.map(rel => (
+                                <Link key={rel.slug} href={`/services/${rel.slug}`}>
+                                    <div className="glass-card" style={{ padding: '2rem', height: '100%', transition: 'all 0.3s ease' }}>
+                                        <h4 className="mb-1">{rel.subject} - {rel.university}</h4>
+                                        <p className="text-xs text-muted mb-2">{rel.city} Hub</p>
+                                        <div className="flex items-center text-xs font-bold text-gradient-gold">
+                                            Academic Guide <ArrowRight size={14} style={{ marginLeft: '4px' }} />
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Internal Linking: More in [City] */}
             {relatedInCity.length > 0 && (

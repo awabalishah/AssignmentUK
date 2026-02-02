@@ -41,6 +41,11 @@ export default function Home() {
                                 <a href="#contact" className="btn btn-primary">Order Now</a>
                                 <a href="#services" className="btn btn-outline">Browse Subjects</a>
                             </div>
+                            <div className="flex items-center" style={{ gap: '1.5rem', marginTop: '3rem', opacity: 0.6 }}>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/SSL_v3_Cert.svg" alt="SSL" style={{ height: '24px', filter: 'grayscale(1)' }} />
+                                <span style={{ fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Turnitin Approved</span>
+                                <span style={{ fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>UK Registered Entity</span>
+                            </div>
                         </div>
                         <div className="flex justify-center">
                             <PriceCalculator />
@@ -104,6 +109,34 @@ export default function Home() {
                                     </div>
                                 </div>
                             </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Lead Scholars Section (EEAT) */}
+            <section className="section" style={{ background: 'var(--bg-alt)', borderTop: '1px solid #eee', borderBottom: '1px solid #eee' }}>
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <span className="text-sm font-bold text-gradient-gold uppercase">Vetted Expertise</span>
+                        <h2 className="text-3xl mt-1">Meet Our Lead Academic Scholars</h2>
+                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Your assignments are supervised by experts from the UK's most prestigious institutions.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                        {[
+                            { name: 'Dr. Alistair H.', role: 'Subject Lead - Law', bio: 'PhD in Common Law from Oxford. 15+ years academic advising.', img: 'https://i.pravatar.cc/150?u=a1' },
+                            { name: 'Prof. Sarah M.', role: 'Lead - Nursing & Health', bio: 'Former NHS Education Lead. Specialized in Evidence-Based Practice.', img: 'https://i.pravatar.cc/150?u=a2' },
+                            { name: 'Dr. James W.', role: 'Head of STEM', bio: 'Computer Science PhD from Imperial. Expert in AI and Algorithms.', img: 'https://i.pravatar.cc/150?u=a3' },
+                            { name: 'Dr. Elena S.', role: 'Humanities Advisor', bio: 'Social Work & Education specialist from UCL. 100+ papers published.', img: 'https://i.pravatar.cc/150?u=a4' }
+                        ].map((scholar, idx) => (
+                            <div key={idx} className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
+                                <div style={{ width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto 1.5rem', overflow: 'hidden', border: '3px solid var(--secondary)' }}>
+                                    <img src={scholar.img} alt={scholar.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                </div>
+                                <h4 className="mb-0">{scholar.name}</h4>
+                                <div className="text-xs font-bold text-gradient-gold mb-1">{scholar.role}</div>
+                                <p className="text-xs text-muted mb-0">{scholar.bio}</p>
+                            </div>
                         ))}
                     </div>
                 </div>
