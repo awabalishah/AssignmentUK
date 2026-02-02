@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Expert Assignment Writing Services UK | Top Grades Guaranteed',
@@ -19,43 +20,43 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <nav style={{ background: '#fff', borderBottom: '1px solid #eee', padding: '1rem 0', position: 'sticky', top: 0, zIndex: 1000 }}>
-          <div className="container flex" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-            <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#001F3F' }}>AssignUK<span style={{ color: '#D4AF37' }}>.</span></div>
-            <div className="flex" style={{ gap: '2rem', alignItems: 'center' }}>
-              <a href="/#services" style={{ fontWeight: 600 }}>Subjects</a>
-              <a href="/#contact" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem' }}>Get Started</a>
+        <nav className="glass-card" style={{ padding: '1rem 0', position: 'sticky', top: 0, zIndex: 1000, borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
+          <div className="container flex items-center justify-between">
+            <Link href="/" style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--primary)' }}>AssignUK<span className="text-gradient-gold">.</span></Link>
+            <div className="flex items-center" style={{ gap: '2rem' }}>
+              <Link href="/#services" className="text-sm font-bold">Subjects</Link>
+              <Link href="/#contact" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem' }}>Get Started</Link>
             </div>
           </div>
         </nav>
         {children}
-        <footer style={{ background: '#001F3F', color: '#fff', padding: '5rem 0' }}>
+        <footer style={{ background: 'var(--primary)', color: '#fff', padding: '5rem 0', borderTop: '4px solid var(--secondary)' }}>
           <div className="container">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
-              <div>
-                <h2 style={{ color: '#fff' }}>AssignUK</h2>
-                <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Elevating academic standards across the UK. Professional support for assignments, exams, and dissertations.</p>
+            <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: '3rem', marginBottom: '4rem' }}>
+              <div style={{ gridColumn: 'span 2' }}>
+                <h2 style={{ color: '#fff' }} className="text-2xl mb-1">AssignUK</h2>
+                <p style={{ opacity: 0.8, fontSize: '0.9rem', maxWidth: '400px' }}>The UK's premier academic support service. We combine subject mastery with rigorous research to help students achieve their potential across all major UK universities.</p>
               </div>
               <div>
-                <h4 style={{ color: '#D4AF37', marginBottom: '1.5rem' }}>Our Services</h4>
-                <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.9rem' }}>
-                  <li>Computer Science Exams</li>
-                  <li>Nursing Assignments</li>
-                  <li>Business Writing</li>
-                  <li>Law Case Studies</li>
+                <h4 style={{ color: 'var(--secondary)', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase' }}>Academic Fields</h4>
+                <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.85rem' }}>
+                  <li>Nursing & Healthcare</li>
+                  <li>Law & Legal Studies</li>
+                  <li>Business & Management</li>
+                  <li>Computer Science & AI</li>
                 </ul>
               </div>
               <div>
-                <h4 style={{ color: '#D4AF37', marginBottom: '1.5rem' }}>Support</h4>
-                <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.9rem' }}>
-                  <li>24/7 Live Chat</li>
-                  <li>WhatsApp Specialist</li>
-                  <li>Email: support@assignuk.com</li>
+                <h4 style={{ color: 'var(--secondary)', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase' }}>Expert Support</h4>
+                <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.85rem' }}>
+                  <li>24/7 Academic Hotline</li>
+                  <li>WhatsApp Consultation</li>
+                  <li>UK-Based Subject Leads</li>
                 </ul>
               </div>
             </div>
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center', opacity: 0.6, fontSize: '0.8rem' }}>
-              <p>&copy; 2025 AssignUK Academic Services. All Rights Reserved. UK Registered Company.</p>
+              <p>&copy; 2025 AssignUK Academic Excellence. Registered in England & Wales. Part of the Global Scholars Network.</p>
             </div>
           </div>
         </footer>

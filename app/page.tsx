@@ -1,55 +1,69 @@
+'use client'
 import Link from 'next/link'
 import data from '@/data/pseo.json'
+import PriceCalculator from '@/app/components/PriceCalculator'
+import LeadForm from '@/app/components/LeadForm'
+import { CheckCircle2, Star, Users, Award, ShieldCheck, ChevronRight } from 'lucide-react'
 
 export default function Home() {
     const subjects = data.subjects;
 
     return (
         <main>
-            {/* Hero Section */}
-            <section className="hero">
+            {/* Professional Hero Section */}
+            <section className="section hero-gradient" style={{ padding: '6rem 0' }}>
                 <div className="container">
-                    <h1>Premium Academic Writing & Exam Support</h1>
-                    <p>UK's elite academic service. From Computer Science Exams to Business Writing, we deliver top-tier results tailored to UK university standards.</p>
-                    <div className="flex justify-center" style={{ marginTop: '2.5rem', gap: '1rem' }}>
-                        <a href="#contact" className="btn btn-gold">Get a Free Quote</a>
-                        <a href="#services" className="btn" style={{ border: '1px solid #fff', color: '#fff' }}>Explore All Subjects</a>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
+                        <div>
+                            <div className="flex items-center mb-1" style={{ gap: '1rem' }}>
+                                <div className="flex" style={{ color: '#FFD700' }}>
+                                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={16} fill="currentColor" />)}
+                                </div>
+                                <span className="text-xs font-bold text-muted">TRUSTED BY 15,000+ UK STUDENTS</span>
+                            </div>
+                            <h1 className="text-4xl md:text-5xl mb-2" style={{ lineHeight: 1.1 }}>
+                                Elevate Your <span className="text-gradient-gold">Academic Success</span> with UK Experts
+                            </h1>
+                            <p className="text-lg text-muted mb-3" style={{ maxWidth: '600px' }}>
+                                From complex Computer Science algorithms to high-stakes Law dissertations, we deliver the precision your grades deserve. UK-based, plagiarism-free, and guaranteed on-time.
+                            </p>
+                            <div className="flex" style={{ gap: '1.5rem', marginBottom: '3rem' }}>
+                                <div className="flex items-center" style={{ gap: '0.5rem' }}>
+                                    <ShieldCheck size={20} color="var(--success)" />
+                                    <span className="text-sm font-bold">100% Confidential</span>
+                                </div>
+                                <div className="flex items-center" style={{ gap: '0.5rem' }}>
+                                    <CheckCircle2 size={20} color="var(--success)" />
+                                    <span className="text-sm font-bold">Plagiarism Free</span>
+                                </div>
+                            </div>
+                            <div className="flex" style={{ gap: '1rem' }}>
+                                <a href="#contact" className="btn btn-primary">Order Now</a>
+                                <a href="#services" className="btn btn-outline">Browse Subjects</a>
+                            </div>
+                        </div>
+                        <div className="flex justify-center">
+                            <PriceCalculator />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Trust Badges */}
-            <section style={{ background: '#F8F9FA', padding: '2rem 0' }}>
-                <div className="container flex justify-center" style={{ gap: '3rem', opacity: 0.7, flexWrap: 'wrap' }}>
-                    <span>✓ 100% Plagiarism Free</span>
-                    <span>✓ UK Based Experts</span>
-                    <span>✓ On-Time Delivery</span>
-                    <span>✓ 24/7 VIP Support</span>
-                </div>
-            </section>
-
-            {/* Subjects Section */}
-            <section id="services" className="section">
-                <div className="container">
-                    <h2 className="text-center mb-2">Our Specialized Expertise</h2>
-                    <p className="text-center" style={{ marginBottom: '3rem', color: '#666' }}>We cover 50+ subjects with dedicated specialists for each field.</p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                        {subjects.map((s) => (
-                            <div key={s.id} style={{
-                                background: '#fff',
-                                border: '1px solid #eee',
-                                padding: '2rem',
-                                borderRadius: '12px',
-                                textAlign: 'left',
-                                boxShadow: '0 10px 15px rgba(0,0,0,0.03)',
-                                transition: 'transform 0.3s ease'
-                            }}>
-                                <h3 style={{ fontSize: '1.25rem' }}>{s.name}</h3>
-                                <p style={{ fontSize: '0.9rem', color: '#666', marginBottom: '1.5rem' }}>{s.description}</p>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                    {s.keywords.slice(0, 3).map(kw => (
-                                        <span key={kw} style={{ background: '#F0F4F8', color: '#001F3F', fontSize: '0.75rem', padding: '0.2rem 0.6rem', borderRadius: '20px' }}>{kw}</span>
-                                    ))}
+            {/* Results/Metrics Strip */}
+            <section style={{ borderTop: '1px solid #eee', borderBottom: '1px solid #eee', background: '#fff' }}>
+                <div className="container py-2">
+                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '2rem' }}>
+                        {[
+                            { label: 'Success Rate', val: '99.8%', icon: Award },
+                            { label: 'Expert Writers', val: '500+', icon: Users },
+                            { label: 'Years Experience', val: '12+', icon: Star },
+                            { label: 'Average Grade', val: '2:1/1st', icon: ShieldCheck },
+                        ].map((stat, idx) => (
+                            <div key={idx} className="flex items-center" style={{ gap: '1rem' }}>
+                                <div style={{ color: 'var(--secondary)' }}><stat.icon size={24} /></div>
+                                <div>
+                                    <div className="text-xl font-extrabold">{stat.val}</div>
+                                    <div className="text-xs text-muted font-bold text-uppercase">{stat.label}</div>
                                 </div>
                             </div>
                         ))}
@@ -57,39 +71,111 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* GEO / LLM Optimized Content Block */}
-            <section className="section section-alt">
+            {/* Specialized Subjects */}
+            <section id="services" className="section">
                 <div className="container">
-                    <h2>Academic Success in 2025: Expert Insights</h2>
-                    <div style={{ background: '#fff', padding: '2.5rem', borderRadius: '15px', borderLeft: '8px solid #D4AF37', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
-                        <p style={{ marginBottom: '1rem' }}><strong>E-E-A-T Focus:</strong> Our UK service is built on Experience, Expertise, Authoritativeness, and Trustworthiness. We don't just write; we research.</p>
-                        <p style={{ marginBottom: '1rem' }}><strong>Subject Range:</strong> From technical <strong>Computer Science exams</strong> to strategic <strong>Business communication</strong>, we bridge the gap between student effort and academic excellence.</p>
-                        <p><strong>Quality Assurance:</strong> Guaranteed plagiarism-free content via Turnitin-standard checks and peer review by subject matter experts.</p>
+                    <div className="text-center mb-3">
+                        <span className="text-sm font-bold text-gradient-gold uppercase">Specialized Expertise</span>
+                        <h2 className="text-3xl mt-1">Our Featured Academic Fields</h2>
+                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Deep expertise in complex subjects, handled by writers with Masters and PhDs from Russell Group universities.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3">
+                        {subjects.map((s) => (
+                            <Link key={s.id} href={`/subject/${s.id}`}>
+                                <div className="glass-card" style={{
+                                    padding: '2rem',
+                                    height: '100%',
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'pointer',
+                                    border: '1px solid transparent'
+                                }}
+                                    onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--secondary)'}
+                                    onMouseLeave={(e) => e.currentTarget.style.borderColor = 'transparent'}
+                                >
+                                    <h3 className="text-xl mb-1 flex items-center justify-between">
+                                        {s.name}
+                                        <ChevronRight size={18} className="text-muted" />
+                                    </h3>
+                                    <p className="text-sm text-muted mb-2">{s.description}</p>
+                                    <div className="flex flex-wrap" style={{ gap: '0.5rem' }}>
+                                        {s.keywords.slice(0, 3).map(kw => (
+                                            <span key={kw} className="text-xs" style={{ background: 'var(--bg-alt)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>{kw}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Contact Form / Lead Capture */}
-            <section id="contact" className="section">
-                <div className="container" style={{ maxWidth: '900px' }}>
-                    <div style={{ background: '#001F3F', color: '#fff', padding: '4rem 3rem', borderRadius: '20px', textAlign: 'center' }}>
-                        <h2 style={{ color: '#fff' }}>Secure Your Grade Today</h2>
-                        <p className="mb-2" style={{ color: '#accent' }}>Instant quotes and 15% discount for first-time orders.</p>
-                        <form style={{ display: 'grid', gap: '1.2rem', textAlign: 'left', marginTop: '2rem' }}>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.2rem' }}>
-                                <input type="text" placeholder="Full Name" style={{ padding: '1rem', borderRadius: '8px', border: 'none' }} required />
-                                <input type="email" placeholder="Email Address" style={{ padding: '1rem', borderRadius: '8px', border: 'none' }} required />
+            {/* Student Success Stories */}
+            <section className="section" style={{ background: '#fff' }}>
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <span className="text-sm font-bold text-gradient-gold uppercase">Student Feedback</span>
+                        <h2 className="text-3xl mt-1">Real Results for Real Students</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3">
+                        {[
+                            {
+                                name: 'Sarah J.',
+                                uni: 'University of Manchester',
+                                text: 'The Nursing care plan was impeccable. They followed the local trust guidelines perfectly. Got a first-class mark!',
+                                subject: 'Nursing'
+                            },
+                            {
+                                name: 'David K.',
+                                uni: 'King\'s College London',
+                                text: 'Their Law experts really understand the UK common law nuances. Delivered a complex case study in 48 hours.',
+                                subject: 'Law'
+                            },
+                            {
+                                name: 'Emily R.',
+                                uni: 'University of Edinburgh',
+                                text: 'Saved me during exam week with a brilliant Computer Science project. Code was clean and well-documented.',
+                                subject: 'CompSci'
+                            }
+                        ].map((rev, i) => (
+                            <div key={i} className="glass-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                <div className="flex" style={{ color: '#FFD700', gap: '2px' }}>
+                                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" />)}
+                                </div>
+                                <p className="text-sm italic" style={{ flexGrow: 1 }}>"{rev.text}"</p>
+                                <div style={{ borderTop: '1px solid #eee', paddingTop: '1rem', marginTop: '1rem' }}>
+                                    <div className="font-bold text-sm">{rev.name}</div>
+                                    <div className="text-xs text-muted">{rev.uni} • {rev.subject}</div>
+                                </div>
                             </div>
-                            <select style={{ padding: '1rem', borderRadius: '8px', border: 'none', background: '#fff', color: '#333' }} required>
-                                <option value="">Select Subject</option>
-                                {subjects.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
-                            </select>
-                            <textarea placeholder="Tell us about your requirements (e.g. Subject, Deadline, Page count)..." style={{ padding: '1rem', borderRadius: '8px', border: 'none', height: '120px' }} required></textarea>
-                            <button type="submit" className="btn btn-gold" style={{ fontSize: '1.1rem' }}>Check Price & Availability</button>
-                        </form>
-                        <div style={{ marginTop: '2.5rem' }}>
-                            <p style={{ marginBottom: '1rem', opacity: 0.8 }}>Or reach out via official UK WhatsApp:</p>
-                            <a href="https://wa.me/447000000000" className="btn btn-primary" style={{ background: '#25D366', color: '#fff', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp</a>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Lead Capture Section */}
+            <section id="contact" className="section section-alt">
+                <div className="container" style={{ maxWidth: '1000px' }}>
+                    <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+                        <div style={{ background: 'var(--navy-gradient)', color: '#fff', padding: '4rem 3rem' }}>
+                            <h2 style={{ color: '#fff' }} className="text-3xl mb-1">Get a Personal Consultation</h2>
+                            <p className="mb-3" style={{ opacity: 0.8 }}>Talk to a subject specialist and get a tailored plan for your next assignment.</p>
+                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1.5rem' }}>
+                                <li className="flex items-center" style={{ gap: '1rem' }}>
+                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '0.5rem', borderRadius: '50%' }}><Award size={20} /></div>
+                                    <span>Vetted UK PhD Writers</span>
+                                </li>
+                                <li className="flex items-center" style={{ gap: '1rem' }}>
+                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '0.5rem', borderRadius: '50%' }}><ShieldCheck size={20} /></div>
+                                    <span>Bank-Grade Confidentiality</span>
+                                </li>
+                                <li className="flex items-center" style={{ gap: '1rem' }}>
+                                    <div style={{ background: 'rgba(255,255,255,0.1)', padding: '0.5rem', borderRadius: '50%' }}><Users size={20} /></div>
+                                    <span>Direct Writer Communication</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style={{ padding: '4rem 3rem', background: '#fff' }}>
+                            <LeadForm />
                         </div>
                     </div>
                 </div>
@@ -97,3 +183,4 @@ export default function Home() {
         </main>
     )
 }
+
