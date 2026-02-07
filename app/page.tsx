@@ -4,6 +4,7 @@ import data from '@/data/pseo.json'
 import PriceCalculator from '@/app/components/PriceCalculator'
 import LeadForm from '@/app/components/LeadForm'
 import { CheckCircle2, Star, Users, Award, ShieldCheck, ChevronRight } from 'lucide-react'
+import authorsData from '@/data/authors.json'
 
 export default function Home() {
     const subjects = data.subjects;
@@ -57,7 +58,7 @@ export default function Home() {
             {/* Results/Metrics Strip */}
             <section style={{ borderTop: '1px solid #eee', borderBottom: '1px solid #eee', background: '#fff' }}>
                 <div className="container py-2">
-                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '2rem' }}>
+                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '2rem;margin: 30px 0;' }}>
                         {[
                             { label: 'Success Rate', val: '99.8%', icon: Award },
                             { label: 'Expert Writers', val: '500+', icon: Users },
@@ -82,7 +83,7 @@ export default function Home() {
                     <div className="text-center mb-3">
                         <span className="text-sm font-bold text-gradient-gold uppercase">Specialized Expertise</span>
                         <h2 className="text-3xl mt-1">Our Featured Academic Fields</h2>
-                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Deep expertise in complex subjects, handled by writers with Masters and PhDs from Russell Group universities.</p>
+                        <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>Deep expertise in complex subjects, handled by writers with Masters and PhDs from Russell Group universities.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3">
                         {subjects.map((s) => (
@@ -122,21 +123,47 @@ export default function Home() {
                         <h2 className="text-3xl mt-1">Meet Our Lead Academic Scholars</h2>
                         <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Your assignments are supervised by experts from the UK's most prestigious institutions.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                        {[
-                            { name: 'Dr. Alistair H.', role: 'Subject Lead - Law', bio: 'PhD in Common Law from Oxford. 15+ years academic advising.', img: 'https://i.pravatar.cc/150?u=a1' },
-                            { name: 'Prof. Sarah M.', role: 'Lead - Nursing & Health', bio: 'Former NHS Education Lead. Specialized in Evidence-Based Practice.', img: 'https://i.pravatar.cc/150?u=a2' },
-                            { name: 'Dr. James W.', role: 'Head of STEM', bio: 'Computer Science PhD from Imperial. Expert in AI and Algorithms.', img: 'https://i.pravatar.cc/150?u=a3' },
-                            { name: 'Dr. Elena S.', role: 'Humanities Advisor', bio: 'Social Work & Education specialist from UCL. 100+ papers published.', img: 'https://i.pravatar.cc/150?u=a4' }
-                        ].map((scholar, idx) => (
-                            <div key={idx} className="glass-card" style={{ padding: '2rem', textAlign: 'center' }}>
-                                <div style={{ width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto 1.5rem', overflow: 'hidden', border: '3px solid var(--secondary)' }}>
-                                    <img src={scholar.img} alt={scholar.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '2rem' }}>
+                        {(authorsData as any[]).slice(0, 4).map((scholar, idx) => (
+                            <Link key={scholar.id} href={`/authors/${scholar.id}`}>
+                                <div className="glass-card" style={{
+                                    padding: '2rem',
+                                    textAlign: 'center',
+                                    height: '100%',
+                                    transition: 'transform 0.3s ease, border-color 0.3s ease',
+                                    border: '1px solid transparent',
+                                    cursor: 'pointer'
+                                }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(-5px)';
+                                        e.currentTarget.style.borderColor = 'var(--secondary)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.borderColor = 'transparent';
+                                    }}
+                                >
+                                    <div style={{
+                                        width: '80px',
+                                        height: '80px',
+                                        borderRadius: '50%',
+                                        margin: '0 auto 1.5rem',
+                                        border: '3px solid var(--secondary)',
+                                        background: 'var(--primary)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: '1.5rem',
+                                        fontWeight: 'bold',
+                                        color: '#fff'
+                                    }}>
+                                        {scholar.initials}
+                                    </div>
+                                    <h4 className="mb-0">{scholar.name}</h4>
+                                    <div className="text-xs font-bold text-gradient-gold mb-1">{scholar.role}</div>
+                                    <p className="text-xs text-muted mb-0">{scholar.bio.slice(0, 100)}...</p>
                                 </div>
-                                <h4 className="mb-0">{scholar.name}</h4>
-                                <div className="text-xs font-bold text-gradient-gold mb-1">{scholar.role}</div>
-                                <p className="text-xs text-muted mb-0">{scholar.bio}</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -187,7 +214,7 @@ export default function Home() {
 
             {/* Lead Capture Section */}
             <section id="contact" className="section section-alt">
-                <div className="container" style={{ maxWidth: '1000px' }}>
+                <div className="container" style={{ maxWidth: '1200px' }}>
                     <div className="glass-card" style={{ padding: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
                         <div style={{ background: 'var(--navy-gradient)', color: '#fff', padding: '4rem 3rem' }}>
                             <h2 style={{ color: '#fff' }} className="text-3xl mb-1">Get a Personal Consultation</h2>

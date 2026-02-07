@@ -1,0 +1,98 @@
+[
+    {
+        "id": "awab-ali-shah",
+        "name": "Awab Ali Shah",
+        "role": "Founder & Lead Academic Writer",
+        "initials": "AS",
+        "img": "https://i.pravatar.cc/150?u=awab",
+        "bio": "I am a professional writer specializing in UI/UX and CRO, bringing a conversion-focused approach to academic clarity. My work ensures that your research is not just accurate, but presented with the persuasive structure needed to command attention.",
+        "specialties": [
+            "Programming",
+            "Computer Science",
+            "UI/UX",
+            "CRO"
+        ],
+        "whyIWrite": "I provide specialized support for students in the UK, Malaysia, and Thailand, focusing on bridging the gap between complex research and 1st-class academic submission.",
+        "qualifications": [
+            "UI/UX Expert",
+            "CRO Specialist"
+        ],
+        "experience": "Founder & Subject lead for technical academic architecture."
+    },
+    {
+        "id": "sarah-j-nursing",
+        "name": "Sarah J.",
+        "role": "Senior Nursing Consultant",
+        "initials": "SJ",
+        "img": "https://i.pravatar.cc/150?u=sarah",
+        "bio": "A dedicated healthcare professional with extensive experience in the NHS and private sectors. Sarah specializes in translating clinical practice into rigorous academic submissions.",
+        "specialties": [
+            "Nursing",
+            "Healthcare",
+            "Medicine"
+        ],
+        "whyIWrite": "I write to help the next generation of UK nurses meet the strict NMC standards while managing the intensity of clinical placements.",
+        "qualifications": [
+            "MSc Nursing",
+            "RGN (UK)"
+        ],
+        "experience": "12+ years in clinical practice and clinical pedagogy."
+    },
+    {
+        "id": "james-l-law",
+        "name": "James L.",
+        "role": "Legal Research Specialist",
+        "initials": "JL",
+        "img": "https://i.pravatar.cc/150?u=james",
+        "bio": "James is an expert in UK Common Law and EU regulations. He brings forensic precision to OSCOLA referencing and legal analysis.",
+        "specialties": [
+            "Law",
+            "Criminology",
+            "International Law"
+        ],
+        "whyIWrite": "My mission is to help law students navigate the complexities of primary sources and neutral citations with 100% accuracy.",
+        "qualifications": [
+            "LLB (Hons)",
+            "LLM International Law"
+        ],
+        "experience": "Qualified legal researcher and academic consultant."
+    },
+    {
+        "id": "david-m-economics",
+        "name": "David M.",
+        "role": "Economics & Stats Lead",
+        "initials": "DM",
+        "img": "https://i.pravatar.cc/150?u=david",
+        "bio": "David specializes in econometric modeling and statistical analysis, turning complex data into clear, persuasive academic arguments.",
+        "specialties": [
+            "Economics",
+            "Statistics",
+            "Data Science"
+        ],
+        "whyIWrite": "I focus on making quantitative data accessible and academically sound for top-tier university submissions.",
+        "qualifications": [
+            "MSc Economics",
+            "Data Science Professional"
+        ],
+        "experience": "Ex-Financial analyst and university teaching assistant."
+    },
+    {
+        "id": "elena-r-marketing",
+        "name": "Elena R.",
+        "role": "Business & Marketing Strategist",
+        "initials": "ER",
+        "img": "https://i.pravatar.cc/150?u=elena",
+        "bio": "Elena combines real-world marketing strategy with academic theory to produce insightful business reports and case studies.",
+        "specialties": [
+            "Marketing",
+            "Business Writing",
+            "Management"
+        ],
+        "whyIWrite": "I help students master the art of business communication, from executive summaries to deep market research.",
+        "qualifications": [
+            "MBA Marketing",
+            "CIM Member"
+        ],
+        "experience": "8+ years in brand management and business consulting."
+    }
+]

@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import FloatingWhatsApp from '@/app/components/FloatingWhatsApp'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://assignment-uk-five.vercel.app'),
@@ -20,7 +21,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <nav className="glass-card" style={{ padding: '1rem 0', position: 'sticky', top: 0, zIndex: 1000, borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
           <div className="container flex items-center justify-between">
             <Link href="/" style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--primary)' }}>AssignUK<span className="text-gradient-gold">.</span></Link>
@@ -41,18 +42,18 @@ export default function RootLayout({
               <div>
                 <h4 style={{ color: 'var(--secondary)', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase' }}>Academic Fields</h4>
                 <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.85rem' }}>
-                  <li>Nursing & Healthcare</li>
-                  <li>Law & Legal Studies</li>
-                  <li>Business & Management</li>
-                  <li>Computer Science & AI</li>
+                  <li><Link href="/subject/nursing" className="hover:text-secondary">Nursing & Healthcare</Link></li>
+                  <li><Link href="/subject/law" className="hover:text-secondary">Law & Legal Studies</Link></li>
+                  <li><Link href="/subject/business-writing" className="hover:text-secondary">Business & Management</Link></li>
+                  <li><Link href="/subject/computer-science" className="hover:text-secondary">Computer Science & AI</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 style={{ color: 'var(--secondary)', marginBottom: '1.5rem', fontSize: '0.9rem', textTransform: 'uppercase' }}>Expert Support</h4>
                 <ul style={{ listStyle: 'none', lineHeight: '2', opacity: 0.8, fontSize: '0.85rem' }}>
-                  <li>24/7 Academic Hotline</li>
-                  <li>WhatsApp Consultation</li>
-                  <li>UK-Based Subject Leads</li>
+                  <li><Link href="/#contact" className="hover:text-secondary">24/7 Academic Hotline</Link></li>
+                  <li><Link href="/#contact" className="hover:text-secondary">WhatsApp Consultation</Link></li>
+                  <li><Link href="/authors/awab-ali-shah" className="hover:text-secondary">UK-Based Subject Leads</Link></li>
                 </ul>
               </div>
             </div>
@@ -61,7 +62,8 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <FloatingWhatsApp />
       </body>
-    </html>
+    </html >
   )
 }

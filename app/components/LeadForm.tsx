@@ -14,7 +14,7 @@ export default function LeadForm() {
     }
 
     return (
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'relative' }}>
             <AnimatePresence mode="wait">
                 {!submitted ? (
                     <motion.form
@@ -26,14 +26,15 @@ export default function LeadForm() {
                         style={{ display: 'grid', gap: '1.2rem' }}
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.2rem' }}>
-                            <input type="text" placeholder="Full Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #eee' }} required />
-                            <input type="email" placeholder="Email Address" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #eee' }} required />
+                            <input type="text" placeholder="Full Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} required />
+                            <input type="email" placeholder="Email Address" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} required />
+                            <input type="tel" placeholder="WhatsApp (e.g., +44...)" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} />
+                            <select style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc', color: '#333' }} required>
+                                <option value="">Select Subject</option>
+                                {data.subjects.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+                            </select>
                         </div>
-                        <select style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #eee', background: '#fff' }} required>
-                            <option value="">Select Subject</option>
-                            {data.subjects.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
-                        </select>
-                        <textarea placeholder="Specific requirements or deadline details..." style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #eee', height: '120px' }} required></textarea>
+                        <textarea placeholder="Specific requirements or deadline details..." style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', height: '120px', background: '#fcfcfc' }} required></textarea>
                         <button type="submit" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem' }}>
                             <Send size={18} /> Get My Free Quote
                         </button>
