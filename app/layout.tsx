@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Script from 'next/script'
+import GoogleAnalytics from '@/app/components/GoogleAnalytics'
 import FloatingWhatsApp from '@/app/components/FloatingWhatsApp'
 
 export const metadata: Metadata = {
@@ -26,19 +26,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
       </head>
       <body suppressHydrationWarning>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-PQ27Z1FS6M"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-PQ27Z1FS6M');
-          `}
-        </Script>
+        <GoogleAnalytics />
         <nav className="glass-card" style={{ padding: '1rem 0', position: 'sticky', top: 0, zIndex: 1000, borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
           <div className="container flex items-center justify-between">
             <Link href="/" style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--primary)' }}>AssignUK<span className="text-gradient-gold">.</span></Link>
