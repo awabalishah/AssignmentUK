@@ -8,6 +8,7 @@ import ExpertSummary from '@/app/components/ExpertSummary'
 import { AcademicStyle } from '@/app/constants/AcademicStyle'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import authorsData from '@/data/authors.json'
+import TrackedLink from '@/app/components/TrackedLink'
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -187,7 +188,14 @@ export default async function PSEOPage({ params }: Props) {
                                 Professional assistance for your {subject.name} assignments in {city}. Our experts ensure your work meets the exact criteria set by local tutors.
                             </p>
                             <div className="flex" style={{ gap: '1rem' }}>
-                                <a href="#contact" className="btn btn-primary">Get a Free Quote</a>
+                                <TrackedLink
+                                    href="#contact"
+                                    className="btn btn-primary"
+                                    eventName="lead_inquiry"
+                                    eventParams={{ page_topic: subject.name }}
+                                >
+                                    Get a Free Quote
+                                </TrackedLink>
                                 <a href="#services" className="btn btn-outline">All Subjects</a>
                             </div>
                         </div>

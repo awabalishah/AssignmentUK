@@ -8,6 +8,7 @@ import ExpertSummary from '@/app/components/ExpertSummary'
 import { AcademicStyle } from '@/app/constants/AcademicStyle'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import authorsData from '@/data/authors.json'
+import TrackedLink from '@/app/components/TrackedLink'
 
 export async function generateStaticParams() {
     return data.universities.map((uni) => ({
@@ -135,8 +136,15 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
                                 Get specialized assignment help and exam preparation designed specifically for <span className="font-bold">{realUni}</span> graduation standards and {AcademicStyle.terms.grading} rubrics.
                             </p>
                             <div className="flex" style={{ gap: '1rem' }}>
-                                <Link href="/#contact" className="btn btn-primary">Get a Free Quote</Link>
-                                <Link href="/#services" className="btn btn-outline">Explore Subjects</Link>
+                                <TrackedLink
+                                    href="#contact"
+                                    className="btn btn-primary"
+                                    eventName="lead_inquiry"
+                                    eventParams={{ page_topic: realUni }}
+                                >
+                                    Get a Free Quote
+                                </TrackedLink>
+                                <Link href="#services" className="btn btn-outline">Explore Subjects</Link>
                             </div>
                         </div>
                         <div className="flex flex-col" style={{ gap: '2rem' }}>

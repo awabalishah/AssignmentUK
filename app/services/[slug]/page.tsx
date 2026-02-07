@@ -9,6 +9,7 @@ import { AcademicStyle } from '@/app/constants/AcademicStyle'
 import { ShieldCheck, Award, Fingerprint } from 'lucide-react'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import authorsData from '@/data/authors.json'
+import TrackedLink from '@/app/components/TrackedLink'
 
 // Type definition for service data
 interface Service {
@@ -198,7 +199,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 Professional <span className="font-bold">{service.type}</span> support for students in <span className="font-bold">{service.city}</span>. Specialized in <span className="text-gradient-gold font-bold">{service.referencing}</span> standards.
                             </p>
                             <div className="flex" style={{ gap: '1rem' }}>
-                                <Link href="/#contact" className="btn btn-primary">Get a Free Quote</Link>
+                                <TrackedLink
+                                    href="#contact"
+                                    className="btn btn-primary"
+                                    eventName="lead_inquiry"
+                                    eventParams={{ page_topic: service.subject }}
+                                >
+                                    Get a Free Quote
+                                </TrackedLink>
                                 <Link href="/#services" className="btn btn-outline">All Subjects</Link>
                             </div>
                         </div>

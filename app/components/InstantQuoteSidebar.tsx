@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Calculator, ArrowRight, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { sendGAEvent } from './GoogleAnalytics'
 
 export default function InstantQuoteSidebar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -12,6 +13,11 @@ export default function InstantQuoteSidebar() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
+
+        sendGAEvent('lead_inquiry', {
+            page_topic: type
+        });
+
         // Handle quote action (e.g., scroll to contact or open modal)
         window.location.href = '/#contact'
     }

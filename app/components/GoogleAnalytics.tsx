@@ -13,6 +13,12 @@ declare global {
     }
 }
 
+export const sendGAEvent = (eventName: string, params?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+        window.gtag('event', eventName, params);
+    }
+};
+
 function GoogleAnalyticsContent() {
     const pathname = usePathname();
     const searchParams = useSearchParams();

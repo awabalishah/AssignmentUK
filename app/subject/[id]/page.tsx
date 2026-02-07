@@ -8,6 +8,7 @@ import { ShieldCheck } from 'lucide-react'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import InstantQuoteSidebar from '@/app/components/InstantQuoteSidebar'
 import authorsData from '@/data/authors.json'
+import TrackedLink from '@/app/components/TrackedLink'
 
 export async function generateStaticParams() {
     return data.subjects.map((subject) => ({
@@ -126,7 +127,14 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                             {subject.description} tailored for UK university standards. Get top-tier results with our specialized experts.
                         </p>
                         <div className="flex justify-center" style={{ gap: '1rem' }}>
-                            <Link href="/#contact" className="btn btn-gold">Get Started</Link>
+                            <TrackedLink
+                                href="#contact"
+                                className="btn btn-gold"
+                                eventName="lead_inquiry"
+                                eventParams={{ page_topic: subject.name }}
+                            >
+                                Get Started
+                            </TrackedLink>
                             <Link href="/#services" className="btn btn-outline">All Subjects</Link>
                         </div>
                     </div>
