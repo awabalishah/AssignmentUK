@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://assignment-writing.com'),
   title: 'Expert Assignment Writing Services UK | Top Grades Guaranteed',
   description: 'Specialized assignment help for UK students in Nursing, Law, Programming, and MBA. 100% Plagiarism-free and on-time delivery.',
+  verification: {
+    google: 'M2ac8jrlYtpoD7d_sb_JXmdJp-xrBnfIkObpzsHDXoA',
+  },
 }
 
 export default function RootLayout({
