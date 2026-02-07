@@ -3,7 +3,7 @@ import pseoData from '@/data/pseo.json'
 import servicesData from '@/data/pseo-services.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://assignment-uk-five.vercel.app'
+    const baseUrl = 'https://assignment-writing.com'
 
     // 1. University Pages
     const uniUrls = pseoData.universities.map((uni) => ({

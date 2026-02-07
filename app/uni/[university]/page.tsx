@@ -40,19 +40,19 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://assignment-uk-five.vercel.app"
+                "item": "https://assignment-writing.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://assignment-uk-five.vercel.app/#services"
+                "item": "https://assignment-writing.com/#services"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": realUni,
-                "item": `https://assignment-uk-five.vercel.app/uni/${university}`
+                "item": `https://assignment-writing.com/uni/${university}`
             }
         ]
     };

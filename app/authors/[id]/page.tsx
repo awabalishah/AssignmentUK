@@ -25,19 +25,19 @@ export default async function AuthorPage({ params }: { params: Promise<{ id: str
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://assignment-uk-five.vercel.app"
+                "item": "https://assignment-writing.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Authors",
-                "item": "https://assignment-uk-five.vercel.app/authors"
+                "item": "https://assignment-writing.com/authors"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": author.name,
-                "item": `https://assignment-uk-five.vercel.app/authors/${author.id}`
+                "item": `https://assignment-writing.com/authors/${author.id}`
             }
         ]
     };

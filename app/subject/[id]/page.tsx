@@ -35,19 +35,19 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://assignment-uk-five.vercel.app"
+                "item": "https://assignment-writing.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://assignment-uk-five.vercel.app/#services"
+                "item": "https://assignment-writing.com/#services"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": subject.name,
-                "item": `https://assignment-uk-five.vercel.app/subject/${subject.id}`
+                "item": `https://assignment-writing.com/subject/${subject.id}`
             }
         ]
     };

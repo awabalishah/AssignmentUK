@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: ['/', '/services/', '/uni/'],
             disallow: ['/api/', '/_next/', '/admin/'],
         },
-        sitemap: 'https://assignment-uk-five.vercel.app/sitemap.xml',
+        sitemap: 'https://assignment-writing.com/sitemap.xml',
     }
 }

@@ -60,25 +60,25 @@ export default async function PSEOPage({ params }: Props) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://assignment-uk-five.vercel.app"
+                "item": "https://assignment-writing.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://assignment-uk-five.vercel.app/#services"
+                "item": "https://assignment-writing.com/#services"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": subject.name,
-                "item": `https://assignment-uk-five.vercel.app/subject/${subject.id}`
+                "item": `https://assignment-writing.com/subject/${subject.id}`
             },
             {
                 "@type": "ListItem",
                 "position": 4,
                 "name": `${subject.name} Help in ${city}`,
-                "item": `https://assignment-uk-five.vercel.app/${slug}`
+                "item": `https://assignment-writing.com/${slug}`
             }
         ]
     };

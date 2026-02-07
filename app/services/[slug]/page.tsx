@@ -104,25 +104,25 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://assignment-uk-five.vercel.app"
+                "item": "https://assignment-writing.com"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://assignment-uk-five.vercel.app/#services"
+                "item": "https://assignment-writing.com/#services"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": service.subject,
-                "item": `https://assignment-uk-five.vercel.app/subject/${service.subject.toLowerCase()}`
+                "item": `https://assignment-writing.com/subject/${service.subject.toLowerCase()}`
             },
             {
                 "@type": "ListItem",
                 "position": 4,
                 "name": service.title,
-                "item": `https://assignment-uk-five.vercel.app/services/${service.slug}`
+                "item": `https://assignment-writing.com/services/${service.slug}`
             }
         ]
     };
@@ -136,7 +136,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         "provider": {
             "@type": "Organization",
             "name": "AssignUK",
-            "logo": "https://assignment-uk-five.vercel.app/logo.png"
+            "logo": "https://assignment-writing.com/logo.png"
         },
         "areaServed": {
             "@type": "City",
