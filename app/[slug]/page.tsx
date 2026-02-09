@@ -9,6 +9,7 @@ import { AcademicStyle } from '@/app/constants/AcademicStyle'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import authorsData from '@/data/authors.json'
 import TrackedLink from '@/app/components/TrackedLink'
+import SubjectChallenges from '@/app/components/SubjectChallenges'
 
 type Props = {
     params: Promise<{ slug: string }>

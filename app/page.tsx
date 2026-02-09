@@ -3,7 +3,7 @@ import Link from 'next/link'
 import data from '@/data/pseo.json'
 import PriceCalculator from '@/app/components/PriceCalculator'
 import LeadForm from '@/app/components/LeadForm'
-import { CheckCircle2, Star, Users, Award, ShieldCheck, ChevronRight } from 'lucide-react'
+import { CheckCircle2, Star, Users, Award, ShieldCheck, ChevronRight, GraduationCap } from 'lucide-react'
 import authorsData from '@/data/authors.json'
 
 export default function Home() {
@@ -58,7 +58,7 @@ export default function Home() {
             {/* Results/Metrics Strip */}
             <section style={{ borderTop: '1px solid #eee', borderBottom: '1px solid #eee', background: '#fff' }}>
                 <div className="container py-2">
-                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '2rem;margin: 30px 0;' }}>
+                    <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: '2rem', margin: '30px 0' }}>
                         {[
                             { label: 'Success Rate', val: '99.8%', icon: Award },
                             { label: 'Expert Writers', val: '500+', icon: Users },
@@ -108,6 +108,54 @@ export default function Home() {
                                             <span key={kw} className="text-xs" style={{ background: 'var(--bg-alt)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>{kw}</span>
                                         ))}
                                     </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Featured Universities (High-Intent internal linking) */}
+            <section className="section" style={{ background: '#fff', borderTop: '1px solid #eee' }}>
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <span className="text-sm font-bold text-gradient-gold uppercase">Top Ranked Support</span>
+                        <h2 className="text-3xl mt-1">Featured Universities</h2>
+                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Direct access to our most requested elite academic services across premium UK institutions.</p>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-5" style={{ gap: '1.5rem' }}>
+                        {[
+                            { name: 'BPP Law', slug: 'lpc-assignment-help-bpp' },
+                            { name: 'UCL Nursing', slug: 'nursing-assignment-help-ucl' },
+                            { name: 'Manchester MBA', slug: 'mba-assignment-help-manchester' },
+                            { name: 'Leeds Business', slug: 'mba-dissertation-help-leeds' },
+                            { name: 'KCL Psychology', slug: 'psychology-literature-review-kcl' }
+                        ].map((uni, idx) => (
+                            <Link key={idx} href={`/services/${uni.slug}`}>
+                                <div className="glass-card" style={{
+                                    padding: '1.5rem',
+                                    textAlign: 'center',
+                                    height: '100%',
+                                    transition: 'all 0.3s ease',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '0.75rem',
+                                    border: '1px solid #eee'
+                                }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.borderColor = 'var(--secondary)';
+                                        e.currentTarget.style.transform = 'translateY(-3px)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.borderColor = '#eee';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                    }}
+                                >
+                                    <GraduationCap size={24} className="text-gradient-gold" />
+                                    <div className="text-sm font-bold mb-0">{uni.name}</div>
+                                    <div className="text-[10px] font-bold text-muted uppercase tracking-tighter">View Excellence →</div>
                                 </div>
                             </Link>
                         ))}

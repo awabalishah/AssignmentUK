@@ -10,6 +10,7 @@ import { ShieldCheck, Award, Fingerprint } from 'lucide-react'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import authorsData from '@/data/authors.json'
 import TrackedLink from '@/app/components/TrackedLink'
+import SubjectChallenges from '@/app/components/SubjectChallenges'
 
 // Type definition for service data
 interface Service {

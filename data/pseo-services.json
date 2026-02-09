@@ -613,5 +613,33 @@
         ],
         "type": "Investment Analysis",
         "description": "Expert real estate valuation support for Reading students."
+    },
+    {
+        "slug": "nursing-assignment-help-ucl",
+        "title": "Nursing Assignment Help at UCL",
+        "subject": "Nursing",
+        "university": "University College London",
+        "city": "London",
+        "referencing": "Harvard",
+        "modules": [
+            "Clinical Practice",
+            "Health Assessment"
+        ],
+        "type": "Assignment Writing",
+        "description": "Expert Nursing assignment help for UCL students, specialized in clinical practice and health assessment modules."
+    },
+    {
+        "slug": "mba-assignment-help-manchester",
+        "title": "MBA Assignment Support - University of Manchester",
+        "subject": "MBA",
+        "university": "University of Manchester",
+        "city": "Manchester",
+        "referencing": "Harvard",
+        "modules": [
+            "Global Business Strategy",
+            "Operational Management"
+        ],
+        "type": "Assignment Writing",
+        "description": "Premium MBA assignment assistance for University of Manchester students, focusing on business strategy and operations."
     }
 ]

@@ -9,6 +9,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs'
 import InstantQuoteSidebar from '@/app/components/InstantQuoteSidebar'
 import authorsData from '@/data/authors.json'
 import TrackedLink from '@/app/components/TrackedLink'
+import SubjectChallenges from '@/app/components/SubjectChallenges'
 
 export async function generateStaticParams() {
     return data.subjects.map((subject) => ({
