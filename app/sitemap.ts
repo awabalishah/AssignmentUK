@@ -37,6 +37,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }))
 
+    // 5. Subject + City combinations (PSEO)
+    const pseoUrls: any[] = []
+    pseoData.subjects.forEach(subject => {
+        pseoData.cities.forEach(city => {
+            pseoUrls.push({
+                url: `${baseUrl}/${subject.id}-assignment-help-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
+                lastModified: new Date(),
+                changeFrequency: 'monthly' as const,
+                priority: 0.6,
+            })
+        })
+    })
+
+    // 6. Authors
+    const authorUrls = ['awab-ali-shah', 'sarah-j-nursing', 'james-l-law', 'david-m-economics', 'elena-r-marketing'].map(id => ({
+        url: `${baseUrl}/authors/${id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
+    }))
+
     return [
         {
             url: baseUrl,
@@ -54,5 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...subjectUrls,
         ...cityUrls,
         ...serviceUrls,
+        ...pseoUrls,
+        ...authorUrls,
     ]
 }
