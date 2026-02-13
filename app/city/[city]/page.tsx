@@ -64,7 +64,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 ]}
             />
 
-            <section className="section hero-gradient" style={{ padding: '8rem 0' }}>
+            <section className="section hero-gradient" style={{ padding: '6rem 0 8rem 0' }}>
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '5rem' }}>
                         <div className="animate-fade-in">

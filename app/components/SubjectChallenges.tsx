@@ -40,7 +40,7 @@ export default function SubjectChallenges({ subject }: SubjectChallengesProps) {
     return (
         <section className="section py-16">
             <div className="container">
-                <div className="glass-card p-10 md:p-14 border-l-8 border-l-secondary flex flex-col md:flex-row gap-10 items-start md:items-center background-white shadow-premium">
+                <div className="glass-card p-10 md:p-14 border-l-8 border-l-secondary flex flex-col md:flex-row gap-10 items-start md:items-center bg-white shadow-premium">
                     <div className="p-6 bg-slate-50 rounded-2xl shadow-inner shrink-0 text-primary">
                         {content.icon}
                     </div>

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: ['/', '/services/', '/uni/', '/subject/', '/authors/', '/city/', '/locations'],
-            disallow: ['/api/', '/_next/', '/admin/'],
+            disallow: ['/api/', '/_next/', '/admin/', '/news/', '/wechat/', '/thtml/', '/*.shtml'],
         },
         sitemap: 'https://assignment-writing.com/sitemap.xml',
     }

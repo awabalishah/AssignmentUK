@@ -172,7 +172,7 @@ export default async function PSEOPage({ params }: Props) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {/* Hero Section */}
-            <section className="section hero-gradient" style={{ borderBottom: '1px solid #eee' }}>
+            <section className="section hero-gradient" style={{ padding: '6rem 0 8rem 0', borderBottom: '1px solid #eee' }}>
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
                         <div>
