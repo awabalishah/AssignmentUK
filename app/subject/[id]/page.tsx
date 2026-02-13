@@ -166,6 +166,12 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                         <div>
                             <h2 className="text-3xl mb-1">Master Your {subject.name} {AcademicStyle.modules}</h2>
                             <p className="mb-2">Our team of UK-based scholars specializes in {subject.name}, ensuring every assignment meets rigorous academic criteria. Whether it's a first-year essay or a final dissertation, we provide the clarity and depth required for {AcademicStyle.firstClass} {AcademicStyle.marks}.</p>
+                            <p className="mb-4 text-primary font-medium italic">
+                                {subject.name.toLowerCase().includes('law') && AcademicStyle.subjectNuance.law[0]}
+                                {subject.name.toLowerCase().includes('nursing') && AcademicStyle.subjectNuance.nursing[0]}
+                                {(subject.name.toLowerCase().includes('business') || subject.name.toLowerCase().includes('mba')) && AcademicStyle.subjectNuance.business[0]}
+                                {subject.name.toLowerCase().includes('computer') && AcademicStyle.subjectNuance.cs[0]}
+                            </p>
                             <div className="grid grid-cols-2" style={{ gap: '1.5rem' }}>
                                 {subject.keywords.map(kw => (
                                     <div key={kw} className="flex items-center" style={{ gap: '0.5rem' }}>
@@ -212,6 +218,8 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                     </div>
                 </div>
             </section>
+
+            <SubjectChallenges subject={subject.name} />
 
             {/* GEO Optimized Section */}
             <section className="section section-alt">

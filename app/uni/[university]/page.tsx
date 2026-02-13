@@ -153,6 +153,8 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
                             <h1 className="text-5xl md:text-6xl mb-2">Expert Academic Support at <span className="text-gradient-gold">{realUni}</span></h1>
                             <p className="text-lg text-muted mb-3" style={{ lineHeight: '1.8' }}>
                                 Get specialized assignment help and exam preparation designed specifically for <span className="font-bold text-primary">{realUni}</span> graduation standards and {AcademicStyle.terms.grading} rubrics.
+                                <br />
+                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[university.length % 3]}</span>
                             </p>
                             <div className="flex" style={{ gap: '1.25rem' }}>
                                 <TrackedLink

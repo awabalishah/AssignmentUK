@@ -75,6 +75,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                             <h1 className="text-5xl md:text-6xl mb-2">Premiere Assignment Help in <span className="text-gradient-gold">{realCity}</span></h1>
                             <p className="text-lg text-muted mb-3" style={{ lineHeight: '1.8' }}>
                                 Connecting students across <span className="font-bold text-primary">{realCity}</span> with elite academic scholars. Specialized support for every major institution in the area.
+                                <br />
+                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[city.length % 3]}</span>
                             </p>
                             <div className="flex" style={{ gap: '1.25rem' }}>
                                 <TrackedLink

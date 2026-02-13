@@ -37,9 +37,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     if (!service) return { title: 'Service Not Found' };
 
+    const metaTemplates = [
+        `Expert ${service.subject} Help at ${service.university} | Top Grades`,
+        `Premium ${service.type} Support - ${service.university} Specialist`,
+        `${service.title} | 100% Plagiarism-Free Support in ${service.city}`,
+        `Get ${service.subject} Academic Excellence at ${service.university}`
+    ];
+
     return {
-        title: service.title,
-        description: service.description,
+        title: metaTemplates[slug.length % 4],
+        description: `${service.description} Dedicated PhD writers familiar with ${service.university} standards. Optimized for ${service.referencing} referencing and high-intent modules.`,
         alternates: {
             canonical: `/services/${service.slug}`
         }
@@ -254,6 +261,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
             </section>
 
+            <SubjectChallenges subject={service.subject} />
+
             {/* Content Section */}
             <section className="section">
                 <div className="container">
@@ -265,9 +274,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 We don't just write; we research and reference according to the specific <span className="font-bold">{service.referencing}</span> guidelines
                                 required by your department.
                             </p>
+                            <p className="mb-2">
+                                {service.subject.toLowerCase().includes('law') && AcademicStyle.subjectNuance.law[service.slug.length % 3]}
+                                {service.subject.toLowerCase().includes('nursing') && AcademicStyle.subjectNuance.nursing[service.slug.length % 3]}
+                                {(service.subject.toLowerCase().includes('business') || service.subject.toLowerCase().includes('mba')) && AcademicStyle.subjectNuance.business[service.slug.length % 3]}
+                                {service.subject.toLowerCase().includes('computer') && AcademicStyle.subjectNuance.cs[service.slug.length % 3]}
+                            </p>
                             <p>
                                 Whether you're working on <span className="italic">{service.modules.join(' or ')}</span>,
                                 our writers provide the depth of analysis and clarity of argument needed to secure {AcademicStyle.firstClass} {AcademicStyle.marks} in {service.city}.
+                                <br /><br />
+                                <span className="text-xs text-muted italic">{AcademicStyle.regionalContext[service.slug.length % 3]}</span>
                             </p>
                         </div>
                         <div style={{ background: '#fff', padding: '3.5rem', borderRadius: '24px', border: '1px solid #E2E8F0', boxShadow: 'var(--shadow-premium)' }}>
