@@ -3,7 +3,7 @@
         "slug": "law-assignment-help-ucl",
         "title": "Law Assignment Help for UCL Students",
         "subject": "Law",
-        "university": "University College London",
+        "university": "UCL (University College London)",
         "city": "London",
         "referencing": "OSCOLA",
         "modules": [
@@ -14,632 +14,577 @@
         "description": "Expert Law assignment help for UCL students, specialized in OSCOLA referencing and core modules like Equity & Trusts."
     },
     {
-        "slug": "nursing-case-study-manchester-met",
-        "title": "Nursing Case Study Help at Manchester Metropolitan",
+        "slug": "nursing-assignment-manchester",
+        "title": "Nursing Assignment Support - University of Manchester",
         "subject": "Nursing",
-        "university": "Manchester Metropolitan University",
-        "city": "Manchester",
-        "referencing": "Harvard (Cite Them Right)",
-        "modules": [
-            "Anatomy & Physiology",
-            "Evidence-Based Practice"
-        ],
-        "type": "Case Study",
-        "description": "Specialized Nursing case study assistance for MMU students, focusing on clinical evidence and anatomy."
-    },
-    {
-        "slug": "mba-dissertation-help-leeds",
-        "title": "MBA Dissertation Writing Service - University of Leeds",
-        "subject": "Business / MBA",
-        "university": "University of Leeds",
-        "city": "Leeds",
-        "referencing": "Harvard",
-        "modules": [
-            "Strategic Management",
-            "Financial Analysis"
-        ],
-        "type": "Dissertation",
-        "description": "Comprehensive MBA dissertation support at the University of Leeds, covering strategic and financial analysis."
-    },
-    {
-        "slug": "lpc-legal-research-bpp",
-        "title": "BPP University LPC Legal Research Help",
-        "subject": "Law (LPC)",
-        "university": "BPP University",
-        "city": "London",
-        "referencing": "OSCOLA",
-        "modules": [
-            "Civil Litigation",
-            "Property Law"
-        ],
-        "type": "Research Support",
-        "description": "Targeted LPC research support for BPP students in London and Birmingham, specializing in Civil Litigation."
-    },
-    {
-        "slug": "lpc-assignment-help-bpp",
-        "title": "LPC Assignment Help at BPP University London",
-        "subject": "Law (LPC)",
-        "university": "BPP University",
-        "city": "London",
-        "referencing": "OSCOLA",
-        "modules": [
-            "Business Law & Practice"
-        ],
-        "type": "Assignment Writing",
-        "description": "Professional LPC assignment help for BPP students in London, focusing on Business Law & Practice."
-    },
-    {
-        "slug": "llm-dissertation-help-ucl",
-        "title": "LLM Dissertation Support - University College London",
-        "subject": "Law (LLM)",
-        "university": "University College London",
-        "city": "London",
-        "referencing": "OSCOLA",
-        "modules": [
-            "International Commercial Law"
-        ],
-        "type": "Dissertation",
-        "description": "Specialized LLM dissertation guidance for UCL students in International Commercial Law."
-    },
-    {
-        "slug": "nursing-case-study-mmu",
-        "title": "Nursing Case Study Guidance - Manchester Metropolitan",
-        "subject": "Nursing",
-        "university": "Manchester Metropolitan",
+        "university": "University of Manchester",
         "city": "Manchester",
         "referencing": "Harvard",
         "modules": [
-            "Evidence-Based Care"
-        ],
-        "type": "Case Study",
-        "description": "Expert nursing case study help for students at Manchester Metropolitan."
-    },
-    {
-        "slug": "mba-strategic-management-leeds",
-        "title": "MBA Strategic Management Assignment Help - Leeds",
-        "subject": "MBA",
-        "university": "University of Leeds",
-        "city": "Leeds",
-        "referencing": "Harvard",
-        "modules": [
-            "Global Strategic Management"
+            "Anatomy",
+            "Public Health"
         ],
         "type": "Assignment Help",
-        "description": "Advanced MBA support for Global Strategic Management modules at Leeds."
+        "description": "Professional nursing assignment help for Manchester students, covering NMC standards."
     },
     {
-        "slug": "psychology-literature-review-kcl",
-        "title": "Psychology Literature Review Help - King's College London",
+        "slug": "mba-dissertation-warwick",
+        "title": "MBA Dissertation Help - University of Warwick",
+        "subject": "MBA",
+        "university": "University of Warwick",
+        "city": "Coventry",
+        "referencing": "Harvard",
+        "modules": [
+            "Leadership",
+            "Operations"
+        ],
+        "type": "Dissertation",
+        "description": "Elite MBA dissertation support for Warwick Business School students."
+    },
+    {
+        "slug": "computer-science-birmingham",
+        "title": "Computer Science Coding Help - University of Birmingham",
+        "subject": "Computer Science",
+        "university": "University of Birmingham",
+        "city": "Birmingham",
+        "referencing": "IEEE",
+        "modules": [
+            "Algorithms",
+            "Cybersecurity"
+        ],
+        "type": "Programming Help",
+        "description": "Technical computer science support for Birmingham students, specializing in Python and Java."
+    },
+    {
+        "slug": "economics-report-lse",
+        "title": "Economics Data Analysis - LSE London",
+        "subject": "Economics",
+        "university": "London School of Economics and Political Science (LSE)",
+        "city": "London",
+        "referencing": "Harvard",
+        "modules": [
+            "Econometrics",
+            "Microeconomics"
+        ],
+        "type": "Report Writing",
+        "description": "Advanced economics report and data analysis help for LSE students."
+    },
+    {
+        "slug": "psychology-essay-kcl",
+        "title": "Psychology Essay Help - King's College London",
         "subject": "Psychology",
         "university": "King's College London",
         "city": "London",
         "referencing": "APA",
         "modules": [
-            "Biological Psychology"
+            "Cognitive Neuroscience",
+            "Developmental Psychology"
         ],
-        "type": "Literature Review",
-        "description": "Academic assistance for Psychology literature reviews at KCL."
+        "type": "Essay Help",
+        "description": "Expert psychology essay writing specialized for KCL standards."
     },
     {
-        "slug": "data-science-assignment-birmingham",
-        "title": "Data Science Assignment Support - University of Birmingham",
-        "subject": "Data Science",
-        "university": "University of Birmingham",
-        "city": "Birmingham",
-        "referencing": "IEEE",
+        "slug": "engineering-lab-report-bristol",
+        "title": "Engineering Lab Report Support - University of Bristol",
+        "subject": "Engineering",
+        "university": "University of Bristol",
+        "city": "Bristol",
+        "referencing": "Vancouver",
         "modules": [
-            "Machine Learning Algorithms"
+            "Structural Integrity",
+            "Thermodynamics"
         ],
-        "type": "Assignment Writing",
-        "description": "Technical data science support for Birmingham students, focusing on Machine Learning."
+        "type": "Lab Report",
+        "description": "Detailed engineering lab report assistance for Bristol students."
     },
     {
-        "slug": "pgce-reflective-essay-ucl",
-        "title": "PGCE Reflective Essay Help - IOE UCL London",
-        "subject": "Education (PGCE)",
-        "university": "IOE - UCL",
-        "city": "London",
+        "slug": "marketing-plan-leeds",
+        "title": "Marketing Plan Assignment - University of Leeds",
+        "subject": "Marketing",
+        "university": "University of Leeds",
+        "city": "Leeds",
         "referencing": "Harvard",
         "modules": [
-            "Professional Practice"
+            "Consumer Behavior",
+            "Digital Strategy"
         ],
-        "type": "Reflective Essay",
-        "description": "Reflective writing support for PGCE students at UCL Institute of Education."
+        "type": "Marketing Assignment",
+        "description": "Creative and strategic marketing support for Leeds University students."
     },
     {
-        "slug": "llb-tort-law-oxford-brookes",
-        "title": "LLB Tort Law Assignment Help - Oxford Brookes",
-        "subject": "Law (LLB)",
-        "university": "Oxford Brookes",
-        "city": "Oxford",
-        "referencing": "OSCOLA",
-        "modules": [
-            "Tort Law"
-        ],
-        "type": "Assignment Support",
-        "description": "Specialized LLB support for Tort Law modules at Oxford Brookes."
-    },
-    {
-        "slug": "adult-nursing-assignment-herts",
-        "title": "Adult Nursing Assignment Help - University of Hertfordshire",
-        "subject": "Nursing (Adult)",
-        "university": "University of Hertfordshire",
-        "city": "Hatfield",
-        "referencing": "Harvard",
-        "modules": [
-            "Acute Care Settings"
-        ],
-        "type": "Assignment Writing",
-        "description": "Nursing support for Hatfield-based students in Adult Nursing care."
-    },
-    {
-        "slug": "business-management-birmingham-city",
-        "title": "Business Management Support - Birmingham City University",
-        "subject": "Business",
-        "university": "Birmingham City University",
-        "city": "Birmingham",
-        "referencing": "Harvard",
-        "modules": [
-            "Operations Management"
-        ],
-        "type": "Assignment Writing",
-        "description": "Comprehensive business management assistance for BCU students."
-    },
-    {
-        "slug": "social-work-reflective-log-edinburgh",
-        "title": "Social Work Reflective Log Help - University of Edinburgh",
-        "subject": "Social Work",
+        "slug": "finance-portfolio-edinburgh",
+        "title": "Finance & Accounting Help - University of Edinburgh",
+        "subject": "Finance",
         "university": "University of Edinburgh",
         "city": "Edinburgh",
         "referencing": "Harvard",
         "modules": [
-            "Social Work Theory"
+            "Corporate Finance",
+            "Audit & Assurance"
         ],
-        "type": "Reflective Log",
-        "description": "Expert guidance for Social Work reflective logs at Edinburgh."
+        "type": "Portfolio Analysis",
+        "description": "High-level finance and accounting support for students in Edinburgh."
     },
     {
-        "slug": "biomedical-science-report-sheffield",
-        "title": "Biomedical Science Report Help - University of Sheffield",
+        "slug": "biomedical-report-cardiff",
+        "title": "Biomedical Science Report - Cardiff University",
         "subject": "Biomedical Science",
-        "university": "University of Sheffield",
-        "city": "Sheffield",
-        "referencing": "Vancouver",
-        "modules": [
-            "Molecular Genetics"
-        ],
-        "type": "Lab Report",
-        "description": "Scientific report writing support for Biomedical Science at Sheffield."
-    },
-    {
-        "slug": "architecture-case-study-bath",
-        "title": "Architecture Case Study Support - University of Bath",
-        "subject": "Architecture",
-        "university": "University of Bath",
-        "city": "Bath",
-        "referencing": "RIBA/APA",
-        "modules": [
-            "Sustainable Design"
-        ],
-        "type": "Case Study",
-        "description": "Design-focused case study assistance for Architecture students at Bath."
-    },
-    {
-        "slug": "marketing-plan-assignment-coventry",
-        "title": "Marketing Plan Assignment Help - Coventry University",
-        "subject": "Marketing",
-        "university": "Coventry University",
-        "city": "Coventry",
-        "referencing": "Harvard",
-        "modules": [
-            "Consumer Behaviour"
-        ],
-        "type": "Marketing Plan",
-        "description": "Creative marketing support for Coventry students, specializing in consumer behavior."
-    },
-    {
-        "slug": "cyber-security-report-warwick",
-        "title": "Cyber Security Technical Report Help - University of Warwick",
-        "subject": "Cyber Security",
-        "university": "University of Warwick",
-        "city": "Coventry",
-        "referencing": "IEEE",
-        "modules": [
-            "Network Security"
-        ],
-        "type": "Technical Report",
-        "description": "Expert cyber security report writing for Warwick students."
-    },
-    {
-        "slug": "physiotherapy-case-study-cardiff",
-        "title": "Physiotherapy Case Study Help - Cardiff University",
-        "subject": "Physiotherapy",
         "university": "Cardiff University",
         "city": "Cardiff",
-        "referencing": "Harvard",
+        "referencing": "Vancouver",
         "modules": [
-            "Musculoskeletal Practice"
+            "Pathology",
+            "Genetics"
         ],
-        "type": "Case Study",
-        "description": "Clinical case study support for Physiotherapy students at Cardiff."
+        "type": "Assignment Help",
+        "description": "Scientific writing support for Cardiff Biomedical students."
     },
     {
-        "slug": "economics-data-analysis-lse",
-        "title": "Economics Data Analysis Support - LSE London",
-        "subject": "Economics",
-        "university": "LSE",
-        "city": "London",
-        "referencing": "Harvard",
+        "slug": "history-thesis-oxford",
+        "title": "History Thesis Guidance - University of Oxford",
+        "subject": "History",
+        "university": "University of Oxford",
+        "city": "Oxford",
+        "referencing": "MHRA",
         "modules": [
-            "Econometrics"
+            "Medieval History",
+            "Modern Politics"
         ],
-        "type": "Data Analysis",
-        "description": "Quantitative economics support for LSE students, specializing in Econometrics."
+        "type": "Thesis Writing",
+        "description": "Elite historical research and thesis support for Oxford students."
     },
     {
-        "slug": "mental-health-nursing-city-london",
-        "title": "Mental Health Nursing Assignment Help - City University London",
-        "subject": "Nursing (Mental Health)",
-        "university": "City, University of London",
-        "city": "London",
-        "referencing": "Harvard",
-        "modules": [
-            "Psychopharmacology"
-        ],
-        "type": "Assignment Writing",
-        "description": "Specialized mental health nursing support for City University London."
-    },
-    {
-        "slug": "international-relations-essay-st-andrews",
-        "title": "International Relations Essay Help - University of St Andrews",
-        "subject": "Int. Relations",
-        "university": "University of St Andrews",
-        "city": "St Andrews",
-        "referencing": "MLA",
-        "modules": [
-            "Global Politics"
-        ],
-        "type": "Essay Writing",
-        "description": "Strategic International Relations support for St Andrews students."
-    },
-    {
-        "slug": "accounting-finance-report-glasgow",
-        "title": "Accounting & Finance Report Support - University of Glasgow",
-        "subject": "Accounting",
-        "university": "University of Glasgow",
-        "city": "Glasgow",
-        "referencing": "Harvard",
-        "modules": [
-            "Financial Reporting"
-        ],
-        "type": "Financial Report",
-        "description": "Expert accounting support for Glasgow students, focusing on financial reporting."
-    },
-    {
-        "slug": "lpc-skills-assignment-ulaw",
-        "title": "LPC Skills Assignment Help - University of Law Manchester",
-        "subject": "Law (LPC)",
-        "university": "University of Law",
-        "city": "Manchester",
+        "slug": "law-moot-court-cambridge",
+        "title": "Law Moot Court Preparation - University of Cambridge",
+        "subject": "Law",
+        "university": "University of Cambridge",
+        "city": "Cambridge",
         "referencing": "OSCOLA",
         "modules": [
-            "Real Estate Law"
-        ],
-        "type": "Skills Assignment",
-        "description": "Practical legal skills support for ULaw students in Manchester."
-    },
-    {
-        "slug": "digital-marketing-strategy-salford",
-        "title": "Digital Marketing Strategy Support - University of Salford",
-        "subject": "Digital Marketing",
-        "university": "University of Salford",
-        "city": "Salford",
-        "referencing": "Harvard",
-        "modules": [
-            "SEO & Content Strategy"
-        ],
-        "type": "Marketing Strategy",
-        "description": "Content-driven marketing support for Salford students."
-    },
-    {
-        "slug": "engineering-technical-report-bristol",
-        "title": "Engineering Technical Report Help - University of Bristol",
-        "subject": "Engineering",
-        "university": "University of Bristol",
-        "city": "Bristol",
-        "referencing": "Numeric",
-        "modules": [
-            "Structural Mechanics"
-        ],
-        "type": "Technical Report",
-        "description": "Advanced engineering support for Bristol students in structural mechanics."
-    },
-    {
-        "slug": "fashion-management-essay-ual",
-        "title": "Fashion Management Essay Help - UAL London",
-        "subject": "Fashion",
-        "university": "UAL (London College of Fashion)",
-        "city": "London",
-        "referencing": "Harvard",
-        "modules": [
-            "Luxury Brand Management"
-        ],
-        "type": "Essay Writing",
-        "description": "Creative fashion management support for UAL students."
-    },
-    {
-        "slug": "criminology-research-paper-leicester",
-        "title": "Criminology Research Paper Support - University of Leicester",
-        "subject": "Criminology",
-        "university": "University of Leicester",
-        "city": "Leicester",
-        "referencing": "Harvard",
-        "modules": [
-            "Criminal Justice System"
+            "Criminal Law",
+            "Trusts"
         ],
         "type": "Research Paper",
-        "description": "In-depth criminology support for Leicester students."
+        "description": "Advanced law research for Cambridge students, specializing in OSCOLA citations."
     },
     {
-        "slug": "mba-leadership-assignment-cranfield",
-        "title": "MBA Leadership Assignment Help - Cranfield University",
-        "subject": "MBA",
-        "university": "Cranfield University",
-        "city": "Cranfield",
-        "referencing": "Harvard",
-        "modules": [
-            "Organizational Behaviour"
-        ],
-        "type": "Assignment Support",
-        "description": "Expert leadership and OB support for Cranfield MBA students."
-    },
-    {
-        "slug": "public-health-dissertation-liverpool",
-        "title": "Public Health Dissertation Help - University of Liverpool",
-        "subject": "Public Health",
+        "slug": "nursing-care-plan-liverpool",
+        "title": "Nursing Care Plan Help - University of Liverpool",
+        "subject": "Nursing",
         "university": "University of Liverpool",
         "city": "Liverpool",
         "referencing": "Harvard",
         "modules": [
-            "Epidemiology"
+            "Patient Assessment",
+            "Clinical Ethics"
         ],
-        "type": "Dissertation",
-        "description": "Comprehensive public health dissertation support at Liverpool."
+        "type": "Care Plan",
+        "description": "Practical nursing care plan support for Liverpool students."
     },
     {
-        "slug": "law-equity-trusts-nottingham",
-        "title": "Law: Equity & Trusts Assignment Help - Nottingham",
-        "subject": "Law",
-        "university": "University of Nottingham",
-        "city": "Nottingham",
-        "referencing": "OSCOLA",
-        "modules": [
-            "Equity & Trusts"
-        ],
-        "type": "Assignment Support",
-        "description": "Legal support for Equity & Trusts modules at Nottingham."
-    },
-    {
-        "slug": "computer-science-java-southampton",
-        "title": "Computer Science Java Project Help - Southampton",
-        "subject": "Computer Science",
+        "slug": "mba-leadership-southampton",
+        "title": "MBA Leadership Report - University of Southampton",
+        "subject": "MBA",
         "university": "University of Southampton",
         "city": "Southampton",
+        "referencing": "Harvard",
+        "modules": [
+            "Organizational Behavior",
+            "Strategic HR"
+        ],
+        "type": "Assignment Report",
+        "description": "Business leadership support for Southampton MBA candidates."
+    },
+    {
+        "slug": "cs-ai-project-newcastle",
+        "title": "CS Artificial Intelligence Project - Newcastle University",
+        "subject": "Computer Science",
+        "university": "Newcastle University",
+        "city": "Newcastle upon Tyne",
         "referencing": "IEEE",
         "modules": [
-            "Object-Oriented Programming"
+            "Machine Learning",
+            "Neural Networks"
         ],
-        "type": "Programming Project",
-        "description": "Technical Java support for Southampton CS students."
+        "type": "Project Support",
+        "description": "Technical AI and ML support for Newcastle students."
     },
     {
-        "slug": "history-of-art-essay-courtauld",
-        "title": "History of Art Essay Support - Courtauld Institute London",
-        "subject": "History of Art",
-        "university": "Courtauld Institute",
-        "city": "London",
-        "referencing": "Chicago",
+        "slug": "marketing-analytics-nottingham",
+        "title": "Marketing Analytics Help - University of Nottingham",
+        "subject": "Marketing",
+        "university": "University of Nottingham",
+        "city": "Nottingham",
+        "referencing": "Harvard",
         "modules": [
-            "Renaissance Art"
+            "Market Research",
+            "Data Analysis"
         ],
-        "type": "Essay Writing",
-        "description": "Art historical research and essay support for Courtauld students."
+        "type": "Analytical Report",
+        "description": "Quantitative marketing support for Nottingham students."
     },
     {
-        "slug": "politics-essay-help-durham",
-        "title": "Politics Essay Support - Durham University",
+        "slug": "business-strat-glasgow",
+        "title": "Global Business Strategy - University of Glasgow",
+        "subject": "Business",
+        "university": "University of Glasgow",
+        "city": "Glasgow",
+        "referencing": "Harvard",
+        "modules": [
+            "International Trade",
+            "Business Policy"
+        ],
+        "type": "Case Study",
+        "description": "Strategic business management help for Glasgow students."
+    },
+    {
+        "slug": "nursing-evidence-belfast",
+        "title": "Evidence-Based Nursing - Queen's Belfast",
+        "subject": "Nursing",
+        "university": "Queen's University Belfast",
+        "city": "Belfast",
+        "referencing": "Harvard",
+        "modules": [
+            "Research Methods",
+            "Clinical Evidence"
+        ],
+        "type": "Assignment Help",
+        "description": "Nursing research and evidence-based practice support in Belfast."
+    },
+    {
+        "slug": "law-eu-regulations-sussex",
+        "title": "EU Law Assignment help - University of Sussex",
+        "subject": "Law",
+        "university": "University of Sussex",
+        "city": "Brighton",
+        "referencing": "OSCOLA",
+        "modules": [
+            "EU Law",
+            "Public Law"
+        ],
+        "type": "Assignment Writing",
+        "description": "Specialized EU law support for Sussex students."
+    },
+    {
+        "slug": "psychology-biological-sheffield",
+        "title": "Biological Psychology Report - University of Sheffield",
+        "subject": "Psychology",
+        "university": "University of Sheffield",
+        "city": "Sheffield",
+        "referencing": "APA",
+        "modules": [
+            "Neuropsychology",
+            "Biological Basis"
+        ],
+        "type": "Lab Report",
+        "description": "Specialized psychological report help in Sheffield."
+    },
+    {
+        "slug": "education-reflective-reading",
+        "title": "Education Reflective Journal - University of Reading",
+        "subject": "Education",
+        "university": "University of Reading",
+        "city": "Reading",
+        "referencing": "Harvard",
+        "modules": [
+            "Teaching Practice",
+            "Child Development"
+        ],
+        "type": "Reflective Journal",
+        "description": "Reflective writing support for Reading education students."
+    },
+    {
+        "slug": "sociology-essay-bath",
+        "title": "Sociology Research Essay - University of Bath",
+        "subject": "Sociology",
+        "university": "University of Bath",
+        "city": "Bath",
+        "referencing": "Harvard",
+        "modules": [
+            "Social Theory",
+            "Global Inequality"
+        ],
+        "type": "Essay Help",
+        "description": "Sociology academic support for Bath students."
+    },
+    {
+        "slug": "politics-report-exeter",
+        "title": "International Relations Report - University of Exeter",
         "subject": "Politics",
-        "university": "Durham University",
-        "city": "Durham",
+        "university": "University of Exeter",
+        "city": "Exeter",
         "referencing": "Harvard",
         "modules": [
-            "Political Philosophy"
+            "Global Security",
+            "Diplomacy"
         ],
-        "type": "Essay Writing",
-        "description": "Strategic political science support for Durham students."
+        "type": "Policy Report",
+        "description": "Strategic politics and IR support in Exeter."
     },
     {
-        "slug": "social-policy-report-york",
-        "title": "Social Policy Analysis Report Help - University of York",
-        "subject": "Social Policy",
-        "university": "University of York",
-        "city": "York",
-        "referencing": "Harvard",
+        "slug": "stats-data-analysis-leicester",
+        "title": "Statistics & SPSS Help - University of Leicester",
+        "subject": "Statistics",
+        "university": "University of Leicester",
+        "city": "Leicester",
+        "referencing": "APA",
         "modules": [
-            "Welfare State Analysis"
+            "Regression Analysis",
+            "SPSS"
         ],
-        "type": "Report Writing",
-        "description": "Expert social policy support for York students."
+        "type": "Data Analysis",
+        "description": "Expert statistical analysis support for Leicester students."
     },
     {
-        "slug": "midwifery-reflective-essay-surrey",
-        "title": "Midwifery Reflective Essay Support - University of Surrey",
-        "subject": "Midwifery",
+        "slug": "law-property-coventry",
+        "title": "Property Law Assignment - Coventry University",
+        "subject": "Law",
+        "university": "Coventry University",
+        "city": "Coventry",
+        "referencing": "OSCOLA",
+        "modules": [
+            "Land Law",
+            "Property"
+        ],
+        "type": "Problem Question Help",
+        "description": "Legal problem question support for Coventry law students."
+    },
+    {
+        "slug": "cs-web-dev-herts",
+        "title": "Web Development Project - University of Hertfordshire",
+        "subject": "Computer Science",
+        "university": "University of Hertfordshire",
+        "city": "Hatfield",
+        "referencing": "IEEE",
+        "modules": [
+            "Full Stack Dev",
+            "UI/UX"
+        ],
+        "type": "Coding Project",
+        "description": "Technical web development help for Herts students."
+    },
+    {
+        "slug": "nursing-mental-health-surrey",
+        "title": "Mental Health Nursing - University of Surrey",
+        "subject": "Nursing",
         "university": "University of Surrey",
         "city": "Guildford",
         "referencing": "Harvard",
         "modules": [
-            "Postnatal Care"
+            "Mental Health Practice",
+            "Crisis Care"
         ],
-        "type": "Reflective Essay",
-        "description": "Clinical reflection support for Midwifery students at Surrey."
+        "type": "Case Study",
+        "description": "Specialized mental health nursing support in Surrey."
     },
     {
-        "slug": "human-rights-law-soas",
-        "title": "Human Rights Law Assignment Help - SOAS London",
-        "subject": "Law",
-        "university": "SOAS University of London",
-        "city": "London",
-        "referencing": "OSCOLA",
-        "modules": [
-            "International Human Rights"
-        ],
-        "type": "Assignment Writing",
-        "description": "Legal support for Human Rights Law at SOAS."
-    },
-    {
-        "slug": "hospitality-management-strathclyde",
-        "title": "Hospitality Management Support - University of Strathclyde",
-        "subject": "Hospitality",
-        "university": "University of Strathclyde",
-        "city": "Glasgow",
+        "slug": "accounting-report-lancaster",
+        "title": "Financial Reporting Help - Lancaster University",
+        "subject": "Accounting",
+        "university": "Lancaster University",
+        "city": "Lancaster",
         "referencing": "Harvard",
         "modules": [
-            "Tourism Marketing"
+            "Audit",
+            "Taxation"
         ],
-        "type": "Assignment Support",
-        "description": "Expert hospitality and tourism support at Strathclyde."
+        "type": "Financial Analysis",
+        "description": "Professional accounting support for Lancaster students."
     },
     {
-        "slug": "fine-art-thesis-goldsmiths",
-        "title": "Fine Art Thesis Support - Goldsmiths London",
-        "subject": "Fine Art",
-        "university": "Goldsmiths",
-        "city": "London",
-        "referencing": "Harvard",
-        "modules": [
-            "Contemporary Theory"
-        ],
-        "type": "Thesis Writing",
-        "description": "Theoretical art support for Goldsmiths students."
-    },
-    {
-        "slug": "mba-finance-assignment-imperial",
-        "title": "MBA Corporate Finance Assignment Help - Imperial London",
-        "subject": "MBA",
-        "university": "Imperial College London",
-        "city": "London",
-        "referencing": "Harvard",
-        "modules": [
-            "Corporate Finance"
-        ],
-        "type": "Assignment Support",
-        "description": "Quantitative finance support for Imperial MBA students."
-    },
-    {
-        "slug": "sports-science-report-loughborough",
-        "title": "Sports Science Laboratory Report Help - Loughborough",
+        "slug": "sports-science-loughborough",
+        "title": "Sports Science Lab Report - Loughborough",
         "subject": "Sports Science",
         "university": "Loughborough University",
         "city": "Loughborough",
         "referencing": "APA",
         "modules": [
-            "Exercise Physiology"
+            "Kinesiology",
+            "Physiology"
         ],
         "type": "Lab Report",
-        "description": "Scientific report support for Sports Science at Loughborough."
+        "description": "Elite sports science academic support at Loughborough."
     },
     {
-        "slug": "journalism-portfolio-city-london",
-        "title": "Journalism Ethics Portfolio Help - City University London",
-        "subject": "Journalism",
-        "university": "City, University of London",
+        "slug": "mba-finance-imperial",
+        "title": "MBA Corporate Finance - Imperial London",
+        "subject": "MBA",
+        "university": "Imperial College London",
         "city": "London",
-        "referencing": "MHRA",
+        "referencing": "Harvard",
         "modules": [
-            "Ethics in Media"
+            "Investment",
+            "Valuation"
         ],
-        "type": "Portfolio Support",
-        "description": "Professional journalism ethics support for City students."
+        "type": "Assignment Help",
+        "description": "Quantitative finance support for Imperial MBA students."
     },
     {
-        "slug": "veterinary-medicine-report-rvc",
-        "title": "Veterinary Pathology Report Help - RVC London",
-        "subject": "Vet Med",
-        "university": "Royal Veterinary College",
-        "city": "London",
-        "referencing": "Vancouver",
-        "modules": [
-            "Veterinary Pathology"
-        ],
-        "type": "Assignment Report",
-        "description": "Medical veterinary support for RVC students."
-    },
-    {
-        "slug": "actuary-maths-assignment-kent",
-        "title": "Actuarial Science Maths Support - University of Kent",
-        "subject": "Actuarial Science",
+        "slug": "programming-python-kent",
+        "title": "Python Programming Help - University of Kent",
+        "subject": "Programming",
         "university": "University of Kent",
         "city": "Canterbury",
+        "referencing": "IEEE",
+        "modules": [
+            "Data Structures",
+            "Software Design"
+        ],
+        "type": "Code Help",
+        "description": "Python expert support for Kent students."
+    },
+    {
+        "slug": "marketing-digital-nottingham-trent",
+        "title": "Digital Marketing Help - Nottingham Trent",
+        "subject": "Marketing",
+        "university": "Nottingham Trent University",
+        "city": "Nottingham",
         "referencing": "Harvard",
         "modules": [
-            "Probability & Statistics"
+            "Social Media",
+            "Email Marketing"
         ],
-        "type": "Maths Assignment",
-        "description": "Quantitative support for Actuarial Science at Kent."
+        "type": "Campaign Plan",
+        "description": "Practical digital marketing help for NTU students."
     },
     {
-        "slug": "creative-writing-portfolio-uea",
-        "title": "Creative Writing Prose Portfolio Help - UEA Norwich",
-        "subject": "Creative Writing",
-        "university": "UEA",
-        "city": "Norwich",
-        "referencing": "MLA",
-        "modules": [
-            "Prose Fiction"
-        ],
-        "type": "Portfolio Support",
-        "description": "Creative narrative support for UEA students."
-    },
-    {
-        "slug": "real-estate-investment-reading",
-        "title": "Real Estate Investment & Valuation Support - Reading",
-        "subject": "Real Estate",
-        "university": "University of Reading",
-        "city": "Reading",
+        "slug": "economics-macro-st-andrews",
+        "title": "Macroeconomics Support - St Andrews",
+        "subject": "Economics",
+        "university": "University of St Andrews",
+        "city": "St Andrews",
         "referencing": "Harvard",
         "modules": [
-            "Property Valuation"
+            "Growth Models",
+            "Fiscal Policy"
         ],
-        "type": "Investment Analysis",
-        "description": "Expert real estate valuation support for Reading students."
+        "type": "Essay Support",
+        "description": "High-level economics support in St Andrews."
     },
     {
-        "slug": "nursing-assignment-help-ucl",
-        "title": "Nursing Assignment Help at UCL",
+        "slug": "law-tort-leeds-beckett",
+        "title": "Tort Law Assignment - Leeds Beckett",
+        "subject": "Law",
+        "university": "Leeds Beckett University",
+        "city": "Leeds",
+        "referencing": "OSCOLA",
+        "modules": [
+            "Negligence",
+            "Defamation"
+        ],
+        "type": "Assignment Help",
+        "description": "Legal writing support for Leeds Beckett students."
+    },
+    {
+        "slug": "business-hr-northumbria",
+        "title": "Human Resource Management - Northumbria",
+        "subject": "Business",
+        "university": "Northumbria University",
+        "city": "Newcastle upon Tyne",
+        "referencing": "Harvard",
+        "modules": [
+            "Recruitment",
+            "Employee Relations"
+        ],
+        "type": "Research Paper",
+        "description": "HR and business management help at Northumbria."
+    },
+    {
+        "slug": "nursing-pediatric-sheffield-hallam",
+        "title": "Pediatric Nursing - Sheffield Hallam",
         "subject": "Nursing",
-        "university": "University College London",
+        "university": "Sheffield Hallam University",
+        "city": "Sheffield",
+        "referencing": "Harvard",
+        "modules": [
+            "Child Health",
+            "Neonatal Care"
+        ],
+        "type": "Case Study",
+        "description": "Specialized pediatric nursing support at Sheffield Hallam."
+    },
+    {
+        "slug": "cs-cyber-security-mmu",
+        "title": "Cyber Security Lab - Manchester Metropolitan",
+        "subject": "Computer Science",
+        "university": "Manchester Metropolitan University",
+        "city": "Manchester",
+        "referencing": "IEEE",
+        "modules": [
+            "Ethical Hacking",
+            "Cryptography"
+        ],
+        "type": "Lab Report",
+        "description": "Practical cyber security support for MMU students."
+    },
+    {
+        "slug": "marketing-brand-bcu",
+        "title": "Brand Management - Birmingham City University",
+        "subject": "Marketing",
+        "university": "Birmingham City University",
+        "city": "Birmingham",
+        "referencing": "Harvard",
+        "modules": [
+            "Brand Equity",
+            "Communication"
+        ],
+        "type": "Marketing Plan",
+        "description": "Creative branding support for BCU marketing students."
+    },
+    {
+        "slug": "mba-operations-aston",
+        "title": "Operations Management - Aston Birmingham",
+        "subject": "MBA",
+        "university": "Aston University",
+        "city": "Birmingham",
+        "referencing": "Harvard",
+        "modules": [
+            "Supply Chain",
+            "Logistics"
+        ],
+        "type": "Case Study",
+        "description": "Business operations support at Aston."
+    },
+    {
+        "slug": "law-commercial-city-london",
+        "title": "Commercial Law - City University London",
+        "subject": "Law",
+        "university": "City, University of London",
+        "city": "London",
+        "referencing": "OSCOLA",
+        "modules": [
+            "Sale of Goods",
+            "Banking Law"
+        ],
+        "type": "Assignment Help",
+        "description": "Professional commercial law support at City University."
+    },
+    {
+        "slug": "psychology-clinical-roehampton",
+        "title": "Clinical Psychology - Roehampton London",
+        "subject": "Psychology",
+        "university": "Roehampton University",
+        "city": "London",
+        "referencing": "APA",
+        "modules": [
+            "Therapy Models",
+            "Diagnosis"
+        ],
+        "type": "Essay Writing",
+        "description": "Clinical psychology academic help at Roehampton."
+    },
+    {
+        "slug": "business-analytics-brunel",
+        "title": "Business Analytics - Brunel London",
+        "subject": "Business",
+        "university": "Brunel University London",
         "city": "London",
         "referencing": "Harvard",
         "modules": [
-            "Clinical Practice",
-            "Health Assessment"
+            "Big Data",
+            "Decision Modeling"
         ],
-        "type": "Assignment Writing",
-        "description": "Expert Nursing assignment help for UCL students, specialized in clinical practice and health assessment modules."
-    },
-    {
-        "slug": "mba-assignment-help-manchester",
-        "title": "MBA Assignment Support - University of Manchester",
-        "subject": "MBA",
-        "university": "University of Manchester",
-        "city": "Manchester",
-        "referencing": "Harvard",
-        "modules": [
-            "Global Business Strategy",
-            "Operational Management"
-        ],
-        "type": "Assignment Writing",
-        "description": "Premium MBA assignment assistance for University of Manchester students, focusing on business strategy and operations."
+        "type": "Report Writing",
+        "description": "Quantitative business support for Brunel students."
     }
 ]

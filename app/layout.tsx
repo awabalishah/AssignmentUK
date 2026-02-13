@@ -85,7 +85,7 @@ export default function RootLayout({
                   <li><Link href="/services/nursing-assignment-help-ucl" className="hover:text-secondary transition-colors">UCL Nursing Hub</Link></li>
                   <li><Link href="/services/lpc-assignment-help-bpp" className="hover:text-secondary transition-colors">BPP Law Experts</Link></li>
                   <li><Link href="/services/mba-assignment-help-manchester" className="hover:text-secondary transition-colors">Manchester MBA</Link></li>
-                  <li><Link href="/authors/awab-ali-shah" className="hover:text-secondary transition-colors">Senior Scholars</Link></li>
+                  <li><Link href="/locations" className="text-secondary font-bold hover:underline transition-colors">All UK Locations →</Link></li>
                 </ul>
               </div>
             </div>

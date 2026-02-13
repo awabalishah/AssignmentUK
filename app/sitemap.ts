@@ -21,7 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }))
 
-    // 3. New pSEO Service Pages
+    // 3. City Pages
+    const cityUrls = pseoData.cities.map((city) => ({
+        url: `${baseUrl}/city/${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }))
+
+    // 4. New pSEO Service Pages
     const serviceUrls = (servicesData as any[]).map((service) => ({
         url: `${baseUrl}/services/${service.slug}`,
         lastModified: new Date(),
@@ -38,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         ...uniUrls,
         ...subjectUrls,
+        ...cityUrls,
         ...serviceUrls,
     ]
 }
