@@ -7,10 +7,33 @@ import data from '@/data/pseo.json'
 
 export default function LeadForm() {
     const [submitted, setSubmitted] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+    })
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+
+        const waMessage = `*New Inquiry*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A*Details:* ${formData.message}`;
+
+        // 1. Send Email (Formspree) - Non-blocking
+        fetch('https://formspree.io/f/xvgzlowz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...formData, _replyto: 'awabalishah@gmail.com' })
+        }).catch(err => console.log("Email submission pending configuration."));
+
+        // 2. Open WhatsApp - Immediate
+        window.open(`https://wa.me/447424096844?text=${waMessage}`, '_blank');
+
         setSubmitted(true);
+        setLoading(false);
     }
 
     return (
@@ -26,17 +49,48 @@ export default function LeadForm() {
                         style={{ display: 'grid', gap: '1.2rem' }}
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.2rem' }}>
-                            <input type="text" placeholder="Full Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} required />
-                            <input type="email" placeholder="Email Address" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} required />
-                            <input type="tel" placeholder="WhatsApp (e.g., +44...)" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }} />
-                            <select style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc', color: '#333' }} required>
+                            <input
+                                type="text"
+                                placeholder="Full Name"
+                                value={formData.name}
+                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }}
+                                required
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email Address"
+                                value={formData.email}
+                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }}
+                                required
+                            />
+                            <input
+                                type="tel"
+                                placeholder="WhatsApp (e.g., +44...)"
+                                value={formData.phone}
+                                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc' }}
+                            />
+                            <select
+                                value={formData.subject}
+                                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                                style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', background: '#fcfcfc', color: '#333' }}
+                                required
+                            >
                                 <option value="">Select Subject</option>
                                 {data.subjects.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
                             </select>
                         </div>
-                        <textarea placeholder="Specific requirements or deadline details..." style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', height: '120px', background: '#fcfcfc' }} required></textarea>
-                        <button type="submit" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem' }}>
-                            <Send size={18} /> Get My Free Quote
+                        <textarea
+                            placeholder="Specific requirements or deadline details..."
+                            value={formData.message}
+                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                            style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #ccc', height: '120px', background: '#fcfcfc' }}
+                            required
+                        ></textarea>
+                        <button type="submit" disabled={loading} className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem', opacity: loading ? 0.7 : 1 }}>
+                            <Send size={18} /> {loading ? 'Sending...' : 'Get My Free Quote'}
                         </button>
                     </motion.form>
                 ) : (

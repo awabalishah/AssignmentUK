@@ -21,48 +21,49 @@ const ExpertProfile = ({ author }: ExpertProfileProps) => {
     return (
         <section className="section" id="expert-profile">
             <div className="container">
-                <div className="glass-card" style={{ padding: '4rem', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
-                    <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: '4rem', alignItems: 'center' }}>
+                <div className="glass-card" style={{ padding: '5rem', border: '1px solid #E2E8F0', background: '#fff' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-12" style={{ gap: '5rem', alignItems: 'center' }}>
                         {/* Image / Icon Area */}
                         <div className="md:col-span-4 text-center">
                             <div style={{ position: 'relative', display: 'inline-block' }}>
                                 <div
                                     style={{
-                                        width: '200px',
-                                        height: '200px',
-                                        borderRadius: '50%',
+                                        width: '220px',
+                                        height: '220px',
+                                        borderRadius: '32px',
                                         background: 'var(--navy-gradient)',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        margin: '0 auto 2rem',
-                                        border: '4px solid #fff',
-                                        boxShadow: 'var(--shadow-lg)'
+                                        margin: '0 auto 2.5rem',
+                                        transform: 'rotate(-2deg)',
+                                        boxShadow: 'var(--shadow-premium)'
                                     }}
                                 >
-                                    <div style={{ fontSize: '4rem', fontWeight: '800', color: '#fff' }}>
+                                    <div style={{ fontSize: '5rem', fontWeight: '900', color: '#fff', transform: 'rotate(2deg)' }}>
                                         {author.initials}
                                     </div>
                                 </div>
                                 <div
                                     style={{
                                         position: 'absolute',
-                                        bottom: '2.5rem',
-                                        right: '1rem',
+                                        bottom: '2rem',
+                                        right: '0rem',
                                         background: 'var(--gold-gradient)',
-                                        padding: '0.5rem',
-                                        borderRadius: '50%',
-                                        border: '2px solid #fff'
+                                        padding: '0.75rem',
+                                        borderRadius: '16px',
+                                        border: '3px solid #fff',
+                                        boxShadow: '0 8px 20px rgba(0,0,0,0.1)'
                                     }}
                                 >
-                                    <ShieldCheck size={24} color="var(--primary)" />
+                                    <ShieldCheck size={28} color="var(--primary)" />
                                 </div>
                             </div>
-                            <h3 className="text-2xl mb-1">{author.name}</h3>
-                            <p className="text-sm font-bold text-gradient-gold uppercase tracking-widest">{author.role}</p>
-                            <div className="flex justify-center flex-wrap" style={{ gap: '0.5rem', marginTop: '1rem' }}>
+                            <h3 className="text-3xl mb-1">{author.name}</h3>
+                            <p className="text-xs font-bold text-secondary uppercase tracking-widest">{author.role}</p>
+                            <div className="flex justify-center flex-wrap" style={{ gap: '0.6rem', marginTop: '1.5rem' }}>
                                 {author.qualifications.map(q => (
-                                    <div key={q} style={{ padding: '0.4rem 0.8rem', borderRadius: '4px', background: 'var(--primary)', color: '#fff', fontSize: '0.7rem', fontWeight: 'bold' }}>{q}</div>
+                                    <div key={q} style={{ padding: '0.5rem 1rem', borderRadius: '20px', background: 'var(--bg-alt)', color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 800, border: '1px solid #E2E8F0' }}>{q}</div>
                                 ))}
                             </div>
                         </div>
@@ -76,15 +77,15 @@ const ExpertProfile = ({ author }: ExpertProfileProps) => {
 
                             <div
                                 style={{
-                                    marginTop: '2rem',
-                                    padding: '1.5rem',
-                                    background: 'var(--bg-alt)',
-                                    borderRadius: '12px',
-                                    border: '1px solid rgba(212, 175, 55, 0.1)'
+                                    marginTop: '2.5rem',
+                                    padding: '2.5rem',
+                                    background: 'var(--premium-grad)',
+                                    borderRadius: '24px',
+                                    border: '1px solid #E2E8F0'
                                 }}
                             >
-                                <h4 className="text-sm font-bold uppercase mb-1 text-gradient-gold">Why I Write</h4>
-                                <p className="text-sm mb-0">
+                                <h4 className="text-xs font-bold uppercase mb-2 tracking-widest text-secondary">Scholarship Philosophy</h4>
+                                <p className="text-base italic font-medium leading-relaxed" style={{ color: 'var(--primary)' }}>
                                     "{author.whyIWrite}"
                                 </p>
                             </div>

@@ -4,17 +4,34 @@ import Link from 'next/link'
 import ExpertProfile from '@/app/components/ExpertProfile'
 import ExpertSummary from '@/app/components/ExpertSummary'
 import { AcademicStyle } from '@/app/constants/AcademicStyle'
-import { ShieldCheck } from 'lucide-react'
+import { ShieldCheck, CheckCircle2, ChevronRight } from 'lucide-react'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import InstantQuoteSidebar from '@/app/components/InstantQuoteSidebar'
 import authorsData from '@/data/authors.json'
 import TrackedLink from '@/app/components/TrackedLink'
 import SubjectChallenges from '@/app/components/SubjectChallenges'
 
+import { Metadata } from 'next'
+
 export async function generateStaticParams() {
     return data.subjects.map((subject) => ({
         id: subject.id,
     }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params;
+    const subject = data.subjects.find((s) => s.id === id);
+
+    if (!subject) return { title: 'Subject Hub' };
+
+    return {
+        title: `Premium ${subject.name} Assignment Help UK | Top Experts`,
+        description: `Professional academic support for ${subject.name}. Vetted UK scholars ensuring ${subject.keywords.slice(0, 3).join(', ')} mastery and first-class results.`,
+        alternates: {
+            canonical: `/subject/${id}`
+        }
+    }
 }
 
 export default async function SubjectPage({ params }: { params: Promise<{ id: string }> }) {
@@ -119,24 +136,25 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
             />
-            <section className="section hero-gradient" style={{ borderBottom: '1px solid #eee' }}>
+            <section className="section hero-gradient" style={{ padding: '7rem 0' }}>
                 <div className="container">
-                    <div className="flex flex-col items-center text-center">
-                        <span className="text-sm font-bold text-gradient-gold mb-1" style={{ textTransform: 'uppercase' }}>Expert Academic Support</span>
-                        <h1 className="text-4xl mb-2">Premium {subject.name} Assignment Help</h1>
-                        <p className="text-lg text-muted mb-3" style={{ maxWidth: '800px' }}>
-                            {subject.description} tailored for UK university standards. Get top-tier results with our specialized experts.
+                    <div className="flex flex-col items-center text-center animate-fade-in">
+                        <span className="text-xs font-bold text-secondary mb-1 uppercase tracking-widest">Academic Specialization</span>
+                        <h1 className="text-5xl md:text-6xl mb-2">Premium <span className="text-gradient-gold">{subject.name}</span> Assignment Help</h1>
+                        <p className="text-lg text-muted mb-3" style={{ maxWidth: '800px', lineHeight: '1.8' }}>
+                            {subject.description} tailored for 2025 UK university standards. Achieve academic excellence with our bespoke scholarship.
                         </p>
-                        <div className="flex justify-center" style={{ gap: '1rem' }}>
+                        <div className="flex justify-center" style={{ gap: '1.25rem' }}>
                             <TrackedLink
                                 href="#contact"
-                                className="btn btn-gold"
+                                className="btn btn-primary"
                                 eventName="lead_inquiry"
                                 eventParams={{ page_topic: subject.name }}
+                                style={{ padding: '1rem 2rem' }}
                             >
                                 Get Started
                             </TrackedLink>
-                            <Link href="/#services" className="btn btn-outline">All Subjects</Link>
+                            <Link href="/#services" className="btn btn-outline" style={{ padding: '1rem 2rem' }}>All Subjects</Link>
                         </div>
                     </div>
                 </div>
@@ -157,21 +175,22 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
                                 ))}
                             </div>
 
-                            <div className="glass-card" style={{ padding: '3rem', marginTop: '3rem' }}>
-                                <h3 className="text-2xl mb-1">Our Success Guarantee</h3>
-                                <ul style={{ listStyle: 'none', display: 'grid', gap: '1rem' }}>
-                                    <li className="flex" style={{ gap: '0.75rem' }}>
-                                        <span style={{ color: 'var(--success)' }}>✓</span>
-                                        <span>NMC & UK Professional Standards</span>
-                                    </li>
-                                    <li className="flex" style={{ gap: '0.75rem' }}>
-                                        <span style={{ color: 'var(--success)' }}>✓</span>
-                                        <span>100% Original Content (Turnitin Safe)</span>
-                                    </li>
-                                    <li className="flex" style={{ gap: '0.75rem' }}>
-                                        <span style={{ color: 'var(--success)' }}>✓</span>
-                                        <span>Unlimited Free Revisions</span>
-                                    </li>
+                            <div className="glass-card" style={{ padding: '3.5rem', marginTop: '3.5rem', background: 'var(--bg-main)', border: '1px solid #E2E8F0' }}>
+                                <h3 className="text-2xl mb-2">Academic Success Guarantee</h3>
+                                <ul style={{ listStyle: 'none', display: 'grid', gap: '1.25rem' }}>
+                                    {[
+                                        'NMC & UK Professional Framework Compliance',
+                                        '100% Original Content (Turnitin Checked)',
+                                        'Unlimited Revisions for Guaranteed 2:1/1st',
+                                        'Secure SSL-Encrypted Data Protection'
+                                    ].map(item => (
+                                        <li key={item} className="flex items-center" style={{ gap: '1rem' }}>
+                                            <div style={{ background: 'var(--bg-alt)', padding: '0.4rem', borderRadius: '50%', display: 'flex' }}>
+                                                <CheckCircle2 size={18} color="var(--success)" />
+                                            </div>
+                                            <span className="font-bold" style={{ fontSize: '0.95rem' }}>{item}</span>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>

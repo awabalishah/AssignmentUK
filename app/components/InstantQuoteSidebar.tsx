@@ -11,15 +11,21 @@ export default function InstantQuoteSidebar() {
     const [words, setWords] = useState(1000)
     const [deadline, setDeadline] = useState('7 Days')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
 
-        sendGAEvent('lead_inquiry', {
-            page_topic: type
-        });
+        const message = `*Quick Quote Request*%0A%0A*Type:* ${type}%0A*Words:* ${words}%0A*Deadline:* ${deadline}`;
 
-        // Handle quote action (e.g., scroll to contact or open modal)
-        window.location.href = '/#contact'
+        // 1. Formspree - Non-blocking
+        fetch('https://formspree.io/f/xvgzlowz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type, words, deadline, _replyto: 'awabalishah@gmail.com' })
+        }).catch(() => { });
+
+        // 2. WhatsApp - Immediate
+        window.open(`https://wa.me/447424096844?text=${message}`, '_blank');
+        setIsOpen(false);
     }
 
     return (

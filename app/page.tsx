@@ -12,43 +12,43 @@ export default function Home() {
     return (
         <main>
             {/* Professional Hero Section */}
-            <section className="section hero-gradient" style={{ padding: '6rem 0' }}>
+            <section className="section hero-gradient" style={{ padding: '8rem 0' }}>
                 <div className="container">
-                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
-                        <div>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '5rem' }}>
+                        <div className="animate-fade-in">
                             <div className="flex items-center mb-1" style={{ gap: '1rem' }}>
-                                <div className="flex" style={{ color: '#FFD700' }}>
+                                <div className="flex" style={{ color: 'var(--secondary)' }}>
                                     {[1, 2, 3, 4, 5].map(i => <Star key={i} size={16} fill="currentColor" />)}
                                 </div>
-                                <span className="text-xs font-bold text-muted">TRUSTED BY 15,000+ UK STUDENTS</span>
+                                <span className="text-xs font-bold text-muted uppercase tracking-widest">Leading Choice for 15,000+ UK Students</span>
                             </div>
-                            <h1 className="text-4xl md:text-5xl mb-2" style={{ lineHeight: 1.1 }}>
-                                Elevate Your <span className="text-gradient-gold">Academic Success</span> with UK Experts
+                            <h1 className="text-5xl md:text-6xl mb-2" style={{ lineHeight: 1.1 }}>
+                                Unlock Your <span className="text-gradient-gold">Academic Potential</span> with UK Experts
                             </h1>
-                            <p className="text-lg text-muted mb-3" style={{ maxWidth: '600px' }}>
-                                From complex Computer Science algorithms to high-stakes Law dissertations, we deliver the precision your grades deserve. UK-based, plagiarism-free, and guaranteed on-time.
+                            <p className="text-lg text-muted mb-3" style={{ maxWidth: '600px', lineHeight: '1.8' }}>
+                                From elite-level Law dissertations to complex Computer Science architectures, we provide the technical depth and academic rigour your grades deserve. UK-based, plagiarism-free, and guaranteed.
                             </p>
-                            <div className="flex" style={{ gap: '1.5rem', marginBottom: '3rem' }}>
-                                <div className="flex items-center" style={{ gap: '0.5rem' }}>
-                                    <ShieldCheck size={20} color="var(--success)" />
-                                    <span className="text-sm font-bold">100% Confidential</span>
+                            <div className="flex items-center" style={{ gap: '2rem', marginBottom: '3.5rem' }}>
+                                <div className="flex items-center" style={{ gap: '0.6rem' }}>
+                                    <ShieldCheck size={22} color="var(--success)" />
+                                    <span className="text-sm font-bold">100% Private</span>
                                 </div>
-                                <div className="flex items-center" style={{ gap: '0.5rem' }}>
-                                    <CheckCircle2 size={20} color="var(--success)" />
-                                    <span className="text-sm font-bold">Plagiarism Free</span>
+                                <div className="flex items-center" style={{ gap: '0.6rem' }}>
+                                    <CheckCircle2 size={22} color="var(--success)" />
+                                    <span className="text-sm font-bold">Original Work</span>
                                 </div>
                             </div>
-                            <div className="flex" style={{ gap: '1rem' }}>
-                                <a href="#contact" className="btn btn-primary">Order Now</a>
-                                <a href="#services" className="btn btn-outline">Browse Subjects</a>
+                            <div className="flex" style={{ gap: '1.25rem' }}>
+                                <Link href="#contact" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>Order Now</Link>
+                                <Link href="#services" className="btn btn-outline" style={{ padding: '1rem 2rem' }}>Explore Subjects</Link>
                             </div>
-                            <div className="flex items-center" style={{ gap: '1.5rem', marginTop: '3rem', opacity: 0.6 }}>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/SSL_v3_Cert.svg" alt="SSL" style={{ height: '24px', filter: 'grayscale(1)' }} />
-                                <span style={{ fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Turnitin Approved</span>
-                                <span style={{ fontSize: '10px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>UK Registered Entity</span>
+                            <div className="flex items-center" style={{ gap: '2rem', marginTop: '4rem', opacity: 0.5 }}>
+                                <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px' }}>Turnitin Approved</span>
+                                <div style={{ width: '1px', height: '15px', background: 'var(--text-muted)' }}></div>
+                                <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px' }}>UK Registered</span>
                             </div>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
                             <PriceCalculator />
                         </div>
                     </div>
@@ -85,27 +85,33 @@ export default function Home() {
                         <h2 className="text-3xl mt-1">Our Featured Academic Fields</h2>
                         <p className="text-muted" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>Deep expertise in complex subjects, handled by writers with Masters and PhDs from Russell Group universities.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3">
+                    <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2.5rem' }}>
                         {subjects.map((s) => (
                             <Link key={s.id} href={`/subject/${s.id}`}>
                                 <div className="glass-card" style={{
-                                    padding: '2rem',
+                                    padding: '2.5rem',
                                     height: '100%',
-                                    transition: 'all 0.3s ease',
-                                    cursor: 'pointer',
-                                    border: '1px solid transparent'
-                                }}
-                                    onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--secondary)'}
-                                    onMouseLeave={(e) => e.currentTarget.style.borderColor = 'transparent'}
-                                >
-                                    <h3 className="text-xl mb-1 flex items-center justify-between">
-                                        {s.name}
-                                        <ChevronRight size={18} className="text-muted" />
-                                    </h3>
-                                    <p className="text-sm text-muted mb-2">{s.description}</p>
-                                    <div className="flex flex-wrap" style={{ gap: '0.5rem' }}>
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    gap: '1.25rem',
+                                    background: 'var(--bg-main)',
+                                    border: '1px solid #E2E8F0'
+                                }}>
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-xl mb-0" style={{ color: 'var(--primary)' }}>{s.name}</h3>
+                                        <div style={{ background: 'var(--bg-alt)', padding: '0.5rem', borderRadius: '10px' }}>
+                                            <ChevronRight size={18} className="text-muted" />
+                                        </div>
+                                    </div>
+                                    <p className="text-sm text-muted mb-0" style={{ flexGrow: 1, lineHeight: '1.7' }}>{s.description}</p>
+                                    <div className="flex flex-wrap" style={{ gap: '0.6rem' }}>
                                         {s.keywords.slice(0, 3).map(kw => (
-                                            <span key={kw} className="text-xs" style={{ background: 'var(--bg-alt)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>{kw}</span>
+                                            <span key={kw} className="text-xs font-bold" style={{
+                                                background: 'var(--secondary-glow)',
+                                                color: 'var(--primary)',
+                                                padding: '0.4rem 0.8rem',
+                                                borderRadius: '20px'
+                                            }}>{kw}</span>
                                         ))}
                                     </div>
                                 </div>
@@ -121,7 +127,7 @@ export default function Home() {
                     <div className="text-center mb-3">
                         <span className="text-sm font-bold text-gradient-gold uppercase">Top Ranked Support</span>
                         <h2 className="text-3xl mt-1">Featured Universities</h2>
-                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Direct access to our most requested elite academic services across premium UK institutions.</p>
+                        <p className="text-muted mx-auto text-center" style={{ maxWidth: '100%' }}>Direct access to our most requested elite academic services across premium UK institutions.</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-5" style={{ gap: '1.5rem' }}>
                         {[
@@ -169,7 +175,7 @@ export default function Home() {
                     <div className="text-center mb-3">
                         <span className="text-sm font-bold text-gradient-gold uppercase">Vetted Expertise</span>
                         <h2 className="text-3xl mt-1">Meet Our Lead Academic Scholars</h2>
-                        <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>Your assignments are supervised by experts from the UK's most prestigious institutions.</p>
+                        <p className="text-muted mx-auto text-center" style={{ maxWidth: '100%' }}>Your assignments are supervised by experts from the UK's most prestigious institutions.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '2rem' }}>
                         {(authorsData as any[]).slice(0, 4).map((scholar, idx) => (

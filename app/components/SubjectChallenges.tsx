@@ -38,22 +38,22 @@ export default function SubjectChallenges({ subject }: SubjectChallengesProps) {
     const content = getContent();
 
     return (
-        <section className="section bg-secondary/5 py-12 border-y border-border/50">
+        <section className="section py-16">
             <div className="container">
-                <div className="glass-card p-8 md:p-10 border-l-4 border-l-primary flex flex-col md:flex-row gap-6 items-start md:items-center">
-                    <div className="p-4 bg-white rounded-full shadow-sm shrink-0">
+                <div className="glass-card p-10 md:p-14 border-l-8 border-l-secondary flex flex-col md:flex-row gap-10 items-start md:items-center background-white shadow-premium">
+                    <div className="p-6 bg-slate-50 rounded-2xl shadow-inner shrink-0 text-primary">
                         {content.icon}
                     </div>
                     <div>
-                        <h3 className="text-2xl font-bold mb-3 flex items-center gap-2">
-                            <AlertTriangle size={24} className="text-amber-500" />
-                            Subject-Specific Challenges
-                        </h3>
-                        <h4 className="text-lg font-semibold text-primary mb-2">{content.title}</h4>
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="bg-amber-100 text-amber-700 text-xs font-black px-3 py-1 rounded-full uppercase tracking-tighter">Academic Alert</span>
+                            <h3 className="text-2xl font-bold m-0">Subject Critical Challenges</h3>
+                        </div>
+                        <h4 className="text-xl font-bold text-gradient-gold mb-3">{content.title}</h4>
                         <div
-                            className="text-muted text-lg leading-relaxed"
+                            className="text-muted text-lg leading-relaxed font-medium"
                             dangerouslySetInnerHTML={{
-                                __html: content.text.replace(/\*\*(.*?)\*\*/g, '<span class="font-bold text-foreground">$1</span>')
+                                __html: content.text.replace(/\*\*(.*?)\*\*/g, '<span class="font-bold text-primary">$1</span>')
                             }}
                         />
                     </div>

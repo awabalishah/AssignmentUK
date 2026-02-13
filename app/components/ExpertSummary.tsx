@@ -16,10 +16,10 @@ interface ExpertSummaryProps {
 
 const ExpertSummary = ({ author }: ExpertSummaryProps) => {
     return (
-        <div className="glass-card" style={{ padding: '2rem', border: '1px solid rgba(212, 175, 55, 0.1)' }}>
-            <h4 className="text-sm font-bold uppercase mb-2 flex items-center" style={{ gap: '0.5rem' }}>
-                <Zap size={16} className="text-gradient-gold" />
-                The Expert Guarantee
+        <div className="glass-card" style={{ padding: '2.5rem', background: 'var(--premium-grad)', border: '1px solid #E2E8F0' }}>
+            <h4 className="text-xs font-bold uppercase mb-2 flex items-center tracking-widest" style={{ gap: '0.6rem', color: 'var(--primary)' }}>
+                <Zap size={16} className="text-secondary" />
+                The Academic Guarantee
             </h4>
             <div style={{ display: 'grid', gap: '1.5rem' }}>
                 <div className="flex items-start" style={{ gap: '1rem' }}>
@@ -43,14 +43,26 @@ const ExpertSummary = ({ author }: ExpertSummaryProps) => {
                 </div>
             </div>
 
-            <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #eee' }}>
-                <div className="flex items-center" style={{ gap: '0.75rem' }}>
-                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--navy-gradient)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#fff', fontWeight: 'bold' }}>{author.initials}</div>
+            <div style={{ marginTop: '2.5rem', paddingTop: '1.75rem', borderTop: '1.5px solid #F1F5F9' }}>
+                <div className="flex items-center" style={{ gap: '1rem' }}>
+                    <div style={{
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '12px',
+                        background: 'var(--navy-gradient)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '12px',
+                        color: '#fff',
+                        fontWeight: 800,
+                        boxShadow: '0 4px 10px rgba(0,26,53,0.2)'
+                    }}>{author.initials}</div>
                     <div className="flex flex-col">
-                        <Link href={`/authors/${author.id}`} className="text-xs font-bold hover:text-secondary transition-colors">
+                        <Link href={`/authors/${author.id}`} className="text-sm font-bold hover:text-secondary transition-colors" style={{ color: 'var(--primary)' }}>
                             {author.name}
                         </Link>
-                        <span className="text-xs text-muted" style={{ fontSize: '0.65rem' }}>{author.role}</span>
+                        <span className="text-xs text-muted" style={{ fontSize: '0.7rem', fontWeight: 600 }}>{author.role}</span>
                     </div>
                 </div>
             </div>

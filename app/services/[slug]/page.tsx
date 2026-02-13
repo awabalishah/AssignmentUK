@@ -182,57 +182,55 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
             />
-            {/* SEO Optimized Hero Section */}
-            <section className="section hero-gradient" style={{ borderBottom: '1px solid #eee' }}>
+            <section className="section hero-gradient" style={{ padding: '8rem 0' }}>
                 <div className="container">
-                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '4rem' }}>
-                        <div>
-                            <div className="flex items-center mb-1 text-gradient-gold" style={{ gap: '0.5rem' }}>
-                                <GraduationCap size={20} />
-                                <span className="text-xs font-bold uppercase tracking-wider">{service.university} Experts</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ alignItems: 'center', gap: '5rem' }}>
+                        <div className="animate-fade-in">
+                            <div className="flex items-center mb-1 text-secondary" style={{ gap: '0.75rem' }}>
+                                <GraduationCap size={24} />
+                                <span className="text-xs font-bold uppercase tracking-widest">{service.university} Specialist</span>
                             </div>
-                            <h1 className="text-4xl md:text-5xl mb-1">{service.title}</h1>
-                            <div className="flex items-center mb-2" style={{ gap: '0.5rem', opacity: 0.8 }}>
-                                <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 'bold', color: '#fff' }}>UK</div>
-                                <span className="text-xs">Identified & Verified by <strong>{currentAuthor.name}</strong> (Subject Lead)</span>
+                            <h1 className="text-5xl md:text-6xl mb-2">{service.title}</h1>
+                            <div className="flex items-center mb-3" style={{ gap: '0.75rem', opacity: 0.9 }}>
+                                <div style={{ width: '28px', height: '28px', borderRadius: '8px', background: 'var(--navy-gradient)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 800, color: '#fff' }}>UK</div>
+                                <span className="text-sm">Verified by <strong>Senior Scholar {currentAuthor.name}</strong></span>
                             </div>
-                            <p className="text-lg text-muted mb-3">
-                                Professional <span className="font-bold">{service.type}</span> support for students in <span className="font-bold">{service.city}</span>. Specialized in <span className="text-gradient-gold font-bold">{service.referencing}</span> standards.
+                            <p className="text-lg text-muted mb-4" style={{ lineHeight: '1.8' }}>
+                                Bespoke <span className="font-bold text-primary">{service.type}</span> support for students in <span className="font-bold text-primary">{service.city}</span>. Rigorous adherence to <span className="text-gradient-gold font-bold">{service.referencing}</span> standards.
                             </p>
-                            <div className="flex" style={{ gap: '1rem' }}>
+                            <div className="flex" style={{ gap: '1.25rem' }}>
                                 <TrackedLink
                                     href="#contact"
                                     className="btn btn-primary"
                                     eventName="lead_inquiry"
                                     eventParams={{ page_topic: service.subject }}
+                                    style={{ padding: '1rem 2rem' }}
                                 >
-                                    Get a Free Quote
+                                    Request Bespoke Quote
                                 </TrackedLink>
-                                <Link href="/#services" className="btn btn-outline">All Subjects</Link>
+                                <Link href="/#services" className="btn btn-outline" style={{ padding: '1rem 2rem' }}>All Subjects</Link>
                             </div>
                         </div>
-                        <div className="flex flex-col" style={{ gap: '2rem' }}>
-                            <div className="glass-card" style={{ padding: '3rem' }}>
-                                <h3 className="text-2xl mb-2">Service Details</h3>
-                                <ul style={{ listStyle: 'none', display: 'grid', gap: '1.2rem' }}>
-                                    <li className="flex items-center" style={{ gap: '0.75rem' }}>
-                                        <BookOpen size={20} color="var(--secondary)" />
-                                        <span><strong>Subject:</strong> {service.subject}</span>
-                                    </li>
-                                    <li className="flex items-center" style={{ gap: '0.75rem' }}>
-                                        <MapPin size={20} color="var(--secondary)" />
-                                        <span><strong>Location:</strong> {service.city}</span>
-                                    </li>
-                                    <li className="flex items-center" style={{ gap: '0.75rem' }}>
-                                        <CheckCircle2 size={20} color="var(--success)" />
-                                        <span><strong>Style:</strong> {service.referencing}</span>
-                                    </li>
+                        <div className="flex flex-col animate-fade-in" style={{ gap: '2.5rem', animationDelay: '0.2s' }}>
+                            <div className="glass-card" style={{ padding: '3.5rem', background: '#fff', border: '1px solid #E2E8F0' }}>
+                                <h3 className="text-2xl mb-2">Service Brief</h3>
+                                <ul style={{ listStyle: 'none', display: 'grid', gap: '1.5rem' }}>
+                                    {[
+                                        { icon: <BookOpen size={20} />, label: 'Specialty', val: service.subject },
+                                        { icon: <MapPin size={20} />, label: 'Hub', val: service.city },
+                                        { icon: <ShieldCheck size={20} />, label: 'Standards', val: service.referencing }
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex items-center" style={{ gap: '1rem' }}>
+                                            <div style={{ background: 'var(--bg-alt)', padding: '0.6rem', borderRadius: '12px', color: 'var(--primary)' }}>{item.icon}</div>
+                                            <span style={{ fontSize: '1rem' }}><strong style={{ opacity: 0.7 }}>{item.label}:</strong> <span className="font-bold">{item.val}</span></span>
+                                        </li>
+                                    ))}
                                 </ul>
-                                <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #eee' }}>
-                                    <h4 className="text-sm font-bold uppercase mb-1">Key {AcademicStyle.modules} Covered:</h4>
-                                    <div className="flex flex-wrap" style={{ gap: '0.5rem' }}>
+                                <div style={{ marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1.5px solid #F1F5F9' }}>
+                                    <h4 className="text-xs font-bold uppercase mb-2 tracking-widest opacity-60">Curriculum Coverage:</h4>
+                                    <div className="flex flex-wrap" style={{ gap: '0.6rem' }}>
                                         {service.modules.map(mod => (
-                                            <span key={mod} className="text-xs font-bold" style={{ background: 'var(--bg-alt)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid #eee' }}>
+                                            <span key={mod} className="text-xs font-bold" style={{ background: 'var(--secondary-glow)', color: 'var(--primary)', padding: '0.4rem 0.8rem', borderRadius: '20px' }}>
                                                 {mod}
                                             </span>
                                         ))}
@@ -240,15 +238,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 </div>
                             </div>
                             <ExpertSummary author={currentAuthor} />
-                            {/* Quality Guarantee Box */}
-                            <div className="glass-card" style={{ padding: '1.5rem', border: '2px solid var(--secondary)', background: 'rgba(212, 175, 55, 0.05)' }}>
-                                <div className="flex items-start" style={{ gap: '1rem' }}>
-                                    <div style={{ background: 'var(--secondary)', color: '#fff', padding: '0.5rem', borderRadius: '8px' }}>
-                                        <ShieldCheck size={20} />
+                            <div className="glass-card" style={{ padding: '1.75rem', border: '1.5px solid var(--secondary)', background: 'rgba(207, 158, 46, 0.03)' }}>
+                                <div className="flex items-center" style={{ gap: '1.25rem' }}>
+                                    <div style={{ background: 'var(--gold-gradient)', color: 'var(--primary)', padding: '0.6rem', borderRadius: '12px' }}>
+                                        <ShieldCheck size={24} />
                                     </div>
                                     <div>
-                                        <h4 className="text-sm font-bold mb-0">Quality Guarantee</h4>
-                                        <p className="text-xs mb-0" style={{ opacity: 0.9 }}>{AcademicStyle.guarantee}</p>
+                                        <h4 className="text-sm font-bold mb-0">Academic Excellence Guarantee</h4>
+                                        <p className="text-xs mb-0" style={{ opacity: 0.8 }}>{AcademicStyle.guarantee}</p>
                                     </div>
                                 </div>
                             </div>
@@ -273,18 +270,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 our writers provide the depth of analysis and clarity of argument needed to secure {AcademicStyle.firstClass} {AcademicStyle.marks} in {service.city}.
                             </p>
                         </div>
-                        <div style={{ background: 'var(--bg-alt)', padding: '3rem', borderRadius: '16px' }}>
-                            <h3 className="text-xl mb-2 font-bold">Standard Features:</h3>
-                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1rem' }}>
+                        <div style={{ background: '#fff', padding: '3.5rem', borderRadius: '24px', border: '1px solid #E2E8F0', boxShadow: 'var(--shadow-premium)' }}>
+                            <h3 className="text-2xl mb-2 font-bold">Standard Features:</h3>
+                            <ul style={{ listStyle: 'none', display: 'grid', gap: '1.25rem' }}>
                                 {[
-                                    '100% Plagiarism-Free (Turnitin Report)',
-                                    'UK-Based Subject Specialists',
-                                    'Direct Communication with Writer',
-                                    'Unlimited Free Revisions'
+                                    '100% Plagiarism-Free (Turnitin Official Report)',
+                                    'PhD-Qualified UK Subject Specialists only',
+                                    'Secure Messaging with your Private Writer',
+                                    'Unlimited Free Revisions & Polishing'
                                 ].map(f => (
-                                    <li key={f} className="flex items-center" style={{ gap: '0.5rem' }}>
-                                        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--secondary)' }}></div>
-                                        <span className="text-sm">{f}</span>
+                                    <li key={f} className="flex items-center" style={{ gap: '1rem' }}>
+                                        <CheckCircle2 size={20} color="var(--success)" />
+                                        <span className="font-bold" style={{ fontSize: '0.95rem' }}>{f}</span>
                                     </li>
                                 ))}
                             </ul>
