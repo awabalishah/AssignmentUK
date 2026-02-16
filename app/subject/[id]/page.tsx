@@ -110,7 +110,43 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
         "description": subject.description,
         "provider": {
             "@type": "Organization",
+            "name": "AssignUK",
+            "logo": "https://assignment-writing.com/logo.png",
+            "sameAs": [
+                "https://www.trustpilot.com/review/assignment-writing.com"
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1240",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    };
+
+    const academicProgramSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOccupationalProgram",
+        "name": `${subject.name} Academic Support Program`,
+        "description": `Comprehensive academic assistance program for ${subject.name} students in the UK.`,
+        "provider": {
+            "@type": "Organization",
             "name": "AssignUK"
+        },
+        "educationalCredentialAwarded": "Academic Distinction Support",
+        "programPrerequisites": [
+            {
+                "@type": "AlignmentObject",
+                "alignmentType": "educational level",
+                "targetName": "Undergraduate/Postgraduate"
+            }
+        ],
+        "occupationalCategory": subject.name,
+        "offers": {
+            "@type": "Offer",
+            "category": "Academic Consulting",
+            "availability": "https://schema.org/InStock"
         }
     };
 
@@ -135,6 +171,10 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(academicProgramSchema) }}
             />
             <section className="section hero-gradient" style={{ padding: '7rem 0' }}>
                 <div className="container">

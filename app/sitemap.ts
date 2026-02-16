@@ -51,7 +51,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
 
     // 6. Authors
-    const authorUrls = ['awab-ali-shah', 'sarah-j-nursing', 'james-l-law', 'david-m-economics', 'elena-r-marketing'].map(id => ({
+    const authorUrls = [
+        'awab-ali-shah',
+        'sarah-j-nursing',
+        'james-l-law',
+        'david-m-economics',
+        'elena-r-marketing',
+        'robert-t-psychology',
+        'emma-w-engineering',
+        'mark-s-finance',
+        'linda-g-sociology'
+    ].map(id => ({
         url: `${baseUrl}/authors/${id}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,

@@ -38,7 +38,17 @@
     "Swansea",
     "York",
     "Hull",
-    "Lincoln"
+    "Lincoln",
+    "Sunderland",
+    "Wolverhampton",
+    "Preston",
+    "Bournemouth",
+    "Huddersfield",
+    "Bolton",
+    "Middlesbrough",
+    "Carlisle",
+    "Dundee",
+    "Newport"
   ],
   "universities": [
     "University of Oxford",
@@ -97,7 +107,14 @@
     "De Montfort University",
     "Anglia Ruskin University",
     "BPP University",
-    "University of Law"
+    "University of Law",
+    "University of Wolverhampton",
+    "University of Sunderland",
+    "University of Central Lancashire",
+    "Bournemouth University",
+    "University of Huddersfield",
+    "University of Bolton",
+    "Teesside University"
   ],
   "subjects": [
     {
@@ -187,6 +204,50 @@
         "Market Research"
       ],
       "description": "Creative and strategic marketing assignment writing with a focus on UK and Global market trends."
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "keywords": [
+        "Clinical Psychology",
+        "Cognitive Science",
+        "Developmental Psychology",
+        "Research Methods"
+      ],
+      "description": "Professional Psychology assignment help covering clinical case studies, literature reviews, and empirical research support."
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "keywords": [
+        "Mechanical Engineering",
+        "Civil Engineering",
+        "Electrical Systems",
+        "Structural Analysis"
+      ],
+      "description": "Technical engineering assignment writing services for UK students, specializing in complex reports, design analysis, and CAD documentation."
+    },
+    {
+      "id": "finance",
+      "name": "Accounting & Finance",
+      "keywords": [
+        "Financial Accounting",
+        "Auditing",
+        "Corporate Finance",
+        "Taxation"
+      ],
+      "description": "Expert support for Accounting and Finance assignments, featuring rigorous data analysis and compliance with UK financial standards."
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology & Social Work",
+      "keywords": [
+        "Social Policy",
+        "Criminology",
+        "Healthcare Systems",
+        "Community Practice"
+      ],
+      "description": "Comprehensive sociology and social work assignment help, focusing on critical theory application and UK policy frameworks."
     }
   ]
 }

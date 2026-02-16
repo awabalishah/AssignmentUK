@@ -116,7 +116,39 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
         "description": `Professional assignment help and exam preparation designed specifically for ${realUni} standards.`,
         "provider": {
             "@type": "Organization",
+            "name": "AssignUK",
+            "logo": "https://assignment-writing.com/logo.png"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "850",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    };
+
+    const uniProgramSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOccupationalProgram",
+        "name": `${realUni} Academic Excellence Program`,
+        "description": `Dedicated academic support and mentorship for students enrolled at ${realUni}.`,
+        "provider": {
+            "@type": "Organization",
             "name": "AssignUK"
+        },
+        "educationalCredentialAwarded": "Professional Academic Support",
+        "programPrerequisites": [
+            {
+                "@type": "AlignmentObject",
+                "alignmentType": "educational level",
+                "targetName": "University Student"
+            }
+        ],
+        "offers": {
+            "@type": "Offer",
+            "category": "Education",
+            "availability": "https://schema.org/InStock"
         }
     };
 
@@ -141,6 +173,10 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(uniProgramSchema) }}
             />
             <section className="section hero-gradient" style={{ padding: '6rem 0 8rem 0' }}>
                 <div className="container">

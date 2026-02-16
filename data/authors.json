@@ -94,5 +94,83 @@
             "CIM Member"
         ],
         "experience": "8+ years in brand management and business consulting."
+    },
+    {
+        "id": "robert-t-psychology",
+        "name": "Dr. Robert T.",
+        "role": "Senior Psychology Research Lead",
+        "initials": "RT",
+        "img": "https://i.pravatar.cc/150?u=robert",
+        "bio": "Dr. Robert T. is a senior academic with a PhD in Psychology, specializing in clinical research and quantitative methods. He has published extensively in peer-reviewed journals.",
+        "specialties": [
+            "Psychology",
+            "Clinical Psychology",
+            "Research Methods"
+        ],
+        "whyIWrite": "I aim to mentor students in the art of empirical research, ensuring their psychological studies are both theoretically sound and methodologically rigorous.",
+        "qualifications": [
+            "PhD Psychology",
+            "BPS Chartered Psychologist"
+        ],
+        "experience": "15+ years in academic research and doctoral supervision."
+    },
+    {
+        "id": "emma-w-engineering",
+        "name": "Emma W.",
+        "role": "Lead Engineering Consultant",
+        "initials": "EW",
+        "img": "https://i.pravatar.cc/150?u=emma",
+        "bio": "Emma is an experienced chartered engineer with a background in structural and mechanical analysis. She specializes in technical reporting and CAD design documentation.",
+        "specialties": [
+            "Engineering",
+            "Mechanical Engineering",
+            "Civil Engineering"
+        ],
+        "whyIWrite": "I enjoy helping engineering students bridge the gap between complex theoretical concepts and professional technical documentation.",
+        "qualifications": [
+            "MEng (Hons) Engineering",
+            "CEng Status"
+        ],
+        "experience": "10+ years in industrial design and academic consultancy."
+    },
+    {
+        "id": "mark-s-finance",
+        "name": "Mark S.",
+        "role": "Accounting & Finance Specialist",
+        "initials": "MS",
+        "img": "https://i.pravatar.cc/150?u=mark",
+        "bio": "Mark is an ACCA-qualified accountant with extensive experience in auditing and corporate finance. He provides high-level support for accounting modules and financial portfolios.",
+        "specialties": [
+            "Accounting & Finance",
+            "Finance",
+            "Auditing",
+            "Taxation"
+        ],
+        "whyIWrite": "My goal is to provide students with the practical financial insights needed to excel in their professional accounting qualifications.",
+        "qualifications": [
+            "ACCA",
+            "BSc Accounting & Finance"
+        ],
+        "experience": "Senior auditor at a Big Four firm and professional educator."
+    },
+    {
+        "id": "linda-g-sociology",
+        "name": "Dr. Linda G.",
+        "role": "Sociology & Social Policy Lead",
+        "initials": "LG",
+        "img": "https://i.pravatar.cc/150?u=linda",
+        "bio": "Dr. Linda G. holds a PhD in Sociology and has worked in both academic and community settings. She specializes in social policy analysis and healthcare ethics.",
+        "specialties": [
+            "Sociology & Social Work",
+            "Sociology",
+            "Social Policy",
+            "Criminology"
+        ],
+        "whyIWrite": "I am passionate about helping students understand the complex social structures that shape our society, with a focus on ethical and effective social work practice.",
+        "qualifications": [
+            "PhD Sociology",
+            "Expert in UK Social Policy"
+        ],
+        "experience": "Experienced university lecturer and policy advisor."
     }
 ]

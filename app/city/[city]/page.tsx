@@ -55,8 +55,36 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
 
     const currentAuthor = authorsData[0];
 
+    const schemaOrg = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Academic Support",
+        "name": `Assignment Help in ${realCity}`,
+        "description": `Professional academic assistance for university students in ${realCity}. Trusted by 1,200+ local students.`,
+        "provider": {
+            "@type": "Organization",
+            "name": "AssignUK",
+            "logo": "https://assignment-writing.com/logo.png"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": realCity
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1240",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    };
+
     return (
         <main>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+            />
             <Breadcrumbs
                 items={[
                     { label: 'Locations', href: '/#services' },

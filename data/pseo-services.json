@@ -586,5 +586,145 @@
         ],
         "type": "Report Writing",
         "description": "Quantitative business support for Brunel students."
+    },
+    {
+        "slug": "psychology-dissertation-wolverhampton",
+        "title": "Psychology Dissertation Help - University of Wolverhampton",
+        "subject": "Psychology",
+        "university": "University of Wolverhampton",
+        "city": "Wolverhampton",
+        "referencing": "APA",
+        "modules": [
+            "Cognitive Psychology",
+            "Research Methods"
+        ],
+        "type": "Dissertation Help",
+        "description": "Professional psychology dissertation support for Wolverhampton students, specialized in APA referencing."
+    },
+    {
+        "slug": "engineering-report-sunderland",
+        "title": "Engineering Technical Report - University of Sunderland",
+        "subject": "Engineering",
+        "university": "University of Sunderland",
+        "city": "Sunderland",
+        "referencing": "Harvard",
+        "modules": [
+            "Manufacturing Systems",
+            "Control Engineering"
+        ],
+        "type": "Technical Report",
+        "description": "Technical engineering report writing for Sunderland students, focusing on manufacturing and control systems."
+    },
+    {
+        "slug": "finance-audit-preston",
+        "title": "Accounting & Finance Audit Help - UCLan Preston",
+        "subject": "Accounting & Finance",
+        "university": "University of Central Lancashire",
+        "city": "Preston",
+        "referencing": "Harvard",
+        "modules": [
+            "Auditing & Assurance",
+            "Financial Management"
+        ],
+        "type": "Audit Report",
+        "description": "Expert audit and financial management support for UCLan students in Preston."
+    },
+    {
+        "slug": "sociology-case-study-bournemouth",
+        "title": "Sociology Case Study - Bournemouth University",
+        "subject": "Sociology & Social Work",
+        "university": "Bournemouth University",
+        "city": "Bournemouth",
+        "referencing": "Harvard",
+        "modules": [
+            "Social Policy",
+            "Contemporary Society"
+        ],
+        "type": "Case Study Help",
+        "description": "Sociology case study and social policy analysis for Bournemouth students."
+    },
+    {
+        "slug": "marketing-strategy-huddersfield",
+        "title": "Marketing Strategy Plan - University of Huddersfield",
+        "subject": "Marketing",
+        "university": "University of Huddersfield",
+        "city": "Huddersfield",
+        "referencing": "Harvard",
+        "modules": [
+            "Strategic Marketing",
+            "Consumer Insights"
+        ],
+        "type": "Marketing Strategy",
+        "description": "Strategic marketing planning and consumer insight support for Huddersfield students."
+    },
+    {
+        "slug": "cs-exam-prep-bolton",
+        "title": "Computer Science Exam Preparation - University of Bolton",
+        "subject": "Computer Science",
+        "university": "University of Bolton",
+        "city": "Bolton",
+        "referencing": "IEEE",
+        "modules": [
+            "Software Engineering",
+            "Database Systems"
+        ],
+        "type": "Exam Prep",
+        "description": "Advanced preparation for CS exams at Bolton University, focusing on software and databases."
+    },
+    {
+        "slug": "nursing-care-plan-middlesbrough",
+        "title": "Nursing Care Plan Help - Teesside University",
+        "subject": "Nursing",
+        "university": "Teesside University",
+        "city": "Middlesbrough",
+        "referencing": "Harvard",
+        "modules": [
+            "Clinical Practice",
+            "Adult Nursing"
+        ],
+        "type": "Care Plan",
+        "description": "NMC-aligned nursing care plan support for Teesside University students."
+    },
+    {
+        "slug": "finance-analysis-middlesbrough",
+        "title": "Financial Analysis Report - Teesside University",
+        "subject": "Accounting & Finance",
+        "university": "Teesside University",
+        "city": "Middlesbrough",
+        "referencing": "Harvard",
+        "modules": [
+            "Business Finance",
+            "Accounting Information"
+        ],
+        "type": "Financial Analysis",
+        "description": "Expert financial analysis and business finance support for Teesside students."
+    },
+    {
+        "slug": "engineering-design-carlisle",
+        "title": "Engineering Design Project - University of Cumbria",
+        "subject": "Engineering",
+        "university": "University of Cumbria",
+        "city": "Carlisle",
+        "referencing": "Harvard",
+        "modules": [
+            "Product Design",
+            "Mechanical Systems"
+        ],
+        "type": "Design Project",
+        "description": "Technical design project support for engineering students in Carlisle."
+    },
+    {
+        "slug": "psychology-lit-review-dundee",
+        "title": "Psychology Literature Review - University of Dundee",
+        "subject": "Psychology",
+        "university": "University of Dundee",
+        "city": "Dundee",
+        "referencing": "APA",
+        "modules": [
+            "Social Psychology",
+            "Developmental Psychology"
+        ],
+        "type": "Literature Review",
+        "description": "Comprehensive psychology literature reviews for students at the University of Dundee."
     }
 ]
