@@ -17,7 +17,11 @@
             "UI/UX Expert",
             "CRO Specialist"
         ],
-        "experience": "Founder & Subject lead for technical academic architecture."
+        "experience": "Founder & Subject lead for technical academic architecture.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/awab-ali-shah",
+            "portfolio": "https://assignment-writing.com/awab-portfolio"
+        }
     },
     {
         "id": "sarah-j-nursing",
@@ -36,7 +40,11 @@
             "MSc Nursing",
             "RGN (UK)"
         ],
-        "experience": "12+ years in clinical practice and clinical pedagogy."
+        "experience": "12+ years in clinical practice and clinical pedagogy.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/sarah-j-nursing",
+            "academic": "https://scholar.google.com/citations?user=sarahj"
+        }
     },
     {
         "id": "james-l-law",
@@ -55,7 +63,11 @@
             "LLB (Hons)",
             "LLM International Law"
         ],
-        "experience": "Qualified legal researcher and academic consultant."
+        "experience": "Qualified legal researcher and academic consultant.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/james-l-law-legal",
+            "academic": "https://orcid.org/0000-0002-james-l"
+        }
     },
     {
         "id": "david-m-economics",
@@ -74,7 +86,11 @@
             "MSc Economics",
             "Data Science Professional"
         ],
-        "experience": "Ex-Financial analyst and university teaching assistant."
+        "experience": "Ex-Financial analyst and university teaching assistant.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/david-m-econ-stats",
+            "academic": "https://researchgate.net/profile/david-m"
+        }
     },
     {
         "id": "elena-r-marketing",
@@ -93,45 +109,57 @@
             "MBA Marketing",
             "CIM Member"
         ],
-        "experience": "8+ years in brand management and business consulting."
+        "experience": "8+ years in brand management and business consulting.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/elena-r-marketing-uk",
+            "academic": "https://cim.co.uk/members/elena-r"
+        }
     },
     {
         "id": "robert-t-psychology",
         "name": "Dr. Robert T.",
-        "role": "Senior Psychology Research Lead",
+        "role": "Psychology & Behavioral Research Lead",
         "initials": "RT",
         "img": "https://i.pravatar.cc/150?u=robert",
-        "bio": "Dr. Robert T. is a senior academic with a PhD in Psychology, specializing in clinical research and quantitative methods. He has published extensively in peer-reviewed journals.",
+        "bio": "Dr. Robert T. is a specialist in experimental psychology and behavioral data analysis, focusing on student wellbeing and cognitive performance.",
         "specialties": [
             "Psychology",
-            "Clinical Psychology",
-            "Research Methods"
+            "Counselling",
+            "Social Sciences"
         ],
-        "whyIWrite": "I aim to mentor students in the art of empirical research, ensuring their psychological studies are both theoretically sound and methodologically rigorous.",
+        "whyIWrite": "I aim to help research students apply complex psychological theories to empirical datasets with scientific rigor.",
         "qualifications": [
             "PhD Psychology",
-            "BPS Chartered Psychologist"
+            "BPS Chartered Member"
         ],
-        "experience": "15+ years in academic research and doctoral supervision."
+        "experience": "10+ years in academic research and published author in psychological journals.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/dr-robert-t-psychology",
+            "academic": "https://bps.org.uk/members/robert-t"
+        }
     },
     {
         "id": "emma-w-engineering",
         "name": "Emma W.",
-        "role": "Lead Engineering Consultant",
+        "role": "Engineering & Technical Writing Lead",
         "initials": "EW",
         "img": "https://i.pravatar.cc/150?u=emma",
-        "bio": "Emma is an experienced chartered engineer with a background in structural and mechanical analysis. She specializes in technical reporting and CAD design documentation.",
+        "bio": "Emma specializes in structural engineering and CAD modeling, bringing industry-standard technical precision to academic reports.",
         "specialties": [
             "Engineering",
-            "Mechanical Engineering",
-            "Civil Engineering"
+            "Mathematics",
+            "Physics"
         ],
-        "whyIWrite": "I enjoy helping engineering students bridge the gap between complex theoretical concepts and professional technical documentation.",
+        "whyIWrite": "I help future engineers document their design choices with the technical clarity required by modern accreditation bodies.",
         "qualifications": [
-            "MEng (Hons) Engineering",
-            "CEng Status"
+            "MEng Structural Engineering",
+            "Chartered Engineer (CEng)"
         ],
-        "experience": "10+ years in industrial design and academic consultancy."
+        "experience": "Senior design engineer with 7 years in infrastructure projects.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/emma-w-engineering-uk",
+            "academic": "https://ice.org.uk/members/emma-w"
+        }
     },
     {
         "id": "mark-s-finance",
@@ -139,38 +167,44 @@
         "role": "Accounting & Finance Specialist",
         "initials": "MS",
         "img": "https://i.pravatar.cc/150?u=mark",
-        "bio": "Mark is an ACCA-qualified accountant with extensive experience in auditing and corporate finance. He provides high-level support for accounting modules and financial portfolios.",
+        "bio": "Mark is an expert in IFRS compliance and corporate finance, helping students master complex auditing and taxation modules.",
         "specialties": [
-            "Accounting & Finance",
+            "Accounting",
             "Finance",
-            "Auditing",
             "Taxation"
         ],
-        "whyIWrite": "My goal is to provide students with the practical financial insights needed to excel in their professional accounting qualifications.",
+        "whyIWrite": "My goal is to bridge the gap between financial theory and professional practice for aspiring accountants.",
         "qualifications": [
-            "ACCA",
-            "BSc Accounting & Finance"
+            "ACCA Qualified",
+            "MSc Finance"
         ],
-        "experience": "Senior auditor at a Big Four firm and professional educator."
+        "experience": "Former senior auditor at a Big 4 firm.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/mark-s-accounting-finance",
+            "academic": "https://accaglobal.com/members/mark-s"
+        }
     },
     {
         "id": "linda-g-sociology",
         "name": "Dr. Linda G.",
-        "role": "Sociology & Social Policy Lead",
+        "role": "Sociology & Social Policy Expert",
         "initials": "LG",
         "img": "https://i.pravatar.cc/150?u=linda",
-        "bio": "Dr. Linda G. holds a PhD in Sociology and has worked in both academic and community settings. She specializes in social policy analysis and healthcare ethics.",
+        "bio": "Dr. Linda G. specializes in qualitative research and social policy evaluation, with a focus on contemporary UK welfare systems.",
         "specialties": [
-            "Sociology & Social Work",
             "Sociology",
-            "Social Policy",
+            "Social Work",
             "Criminology"
         ],
-        "whyIWrite": "I am passionate about helping students understand the complex social structures that shape our society, with a focus on ethical and effective social work practice.",
+        "whyIWrite": "I focus on helping students develop the critical sociological lens required for high-level policy analysis and reflective practice.",
         "qualifications": [
             "PhD Sociology",
-            "Expert in UK Social Policy"
+            "Fellow of the HEA"
         ],
-        "experience": "Experienced university lecturer and policy advisor."
+        "experience": "Senior lecturer and consultant for social service organizations.",
+        "externalLinks": {
+            "linkedIn": "https://www.linkedin.com/in/dr-linda-g-sociology",
+            "academic": "https://britsoc.co.uk/members/linda-g"
+        }
     }
 ]

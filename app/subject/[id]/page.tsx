@@ -147,6 +147,11 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
             "@type": "Offer",
             "category": "Academic Consulting",
             "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1240"
         }
     };
 

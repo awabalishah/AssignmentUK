@@ -11,6 +11,11 @@ interface Author {
     whyIWrite: string;
     qualifications: string[];
     experience: string;
+    externalLinks?: {
+        linkedIn?: string;
+        academic?: string;
+        portfolio?: string;
+    };
 }
 
 interface ExpertProfileProps {
@@ -65,6 +70,14 @@ const ExpertProfile = ({ author }: ExpertProfileProps) => {
                                 {author.qualifications.map(q => (
                                     <div key={q} style={{ padding: '0.5rem 1rem', borderRadius: '20px', background: 'var(--bg-alt)', color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 800, border: '1px solid #E2E8F0' }}>{q}</div>
                                 ))}
+                            </div>
+                            <div className="flex justify-center mt-3" style={{ gap: '1rem' }}>
+                                {author.externalLinks?.linkedIn && (
+                                    <a href={author.externalLinks.linkedIn} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline text-xs font-bold uppercase tracking-tighter">LinkedIn</a>
+                                )}
+                                {author.externalLinks?.academic && (
+                                    <a href={author.externalLinks.academic} target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline text-xs font-bold uppercase tracking-tighter">Academic Profile</a>
+                                )}
                             </div>
                         </div>
 
@@ -134,6 +147,20 @@ const ExpertProfile = ({ author }: ExpertProfileProps) => {
                                     "I don't just provide answers; I provide academic authority. Every piece of work I deliver is a testament to my commitment to excellence across borders."
                                 </p>
                             </div>
+                            {/* Author Schema */}
+                            <script
+                                type="application/ld+json"
+                                dangerouslySetInnerHTML={{
+                                    __html: JSON.stringify({
+                                        "@context": "https://schema.org",
+                                        "@type": "Person",
+                                        "name": author.name,
+                                        "jobTitle": author.role,
+                                        "description": author.bio,
+                                        "sameAs": Object.values(author.externalLinks || {})
+                                    })
+                                }}
+                            />
                         </div>
                     </div>
                 </div>

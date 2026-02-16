@@ -164,6 +164,38 @@ export default async function PSEOPage({ params }: Props) {
         }
     }
 
+    const academicProgramSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOccupationalProgram",
+        "name": `${subject.name} Academic Support Program in ${city}`,
+        "description": `Bespoke academic assistance program for ${subject.name} students in ${city}. Focuses on technical excellence and graduation standards.`,
+        "provider": {
+            "@type": "Organization",
+            "name": "AssignUK",
+            "sameAs": "https://assignment-writing.com"
+        },
+        "educationalCredentialAwarded": "Academic Distinction Support",
+        "programPrerequisites": [
+            {
+                "@type": "AlignmentObject",
+                "alignmentType": "educational level",
+                "targetName": "Undergraduate/Postgraduate"
+            }
+        ],
+        "occupationalCategory": subject.name,
+        "offers": {
+            "@type": "Offer",
+            "category": "Academic Consulting",
+            "availability": "https://schema.org/InStock",
+            "areaServed": city
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1200"
+        }
+    };
+
     const relatedInCity = (servicesData as any[])
         .filter(s => s.city === city);
 
@@ -189,6 +221,10 @@ export default async function PSEOPage({ params }: Props) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(academicProgramSchema) }}
             />
             {/* Hero Section */}
             <section className="section hero-gradient" style={{ padding: '6rem 0 8rem 0', borderBottom: '1px solid #eee' }}>

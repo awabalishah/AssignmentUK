@@ -1,4 +1,4 @@
-import { AlertTriangle, BookOpen, Scale, Activity, BarChart3 } from 'lucide-react';
+import { AlertTriangle, BookOpen, Scale, Activity, BarChart3, Brain, Settings, Wallet, Users } from 'lucide-react';
 
 type SubjectChallengesProps = {
     subject: string;
@@ -25,6 +25,30 @@ export default function SubjectChallenges({ subject }: SubjectChallengesProps) {
                 icon: <BarChart3 className="text-primary" size={32} />,
                 title: "Strategic Business Analysis",
                 text: "Mastering strategic frameworks like **PESTLE**, **SWOT**, and **Porter's Five Forces** is crucial. We help you integrate real-world market data and financial analysis into your business reports, ensuring your work demonstrates the critical thinking required for distinction grades."
+            };
+        } else if (normalizedSubject.includes('psychology')) {
+            return {
+                icon: <Brain className="text-primary" size={32} />,
+                title: "Empirical Research & Ethics",
+                text: "Mastering **APA 7th Edition** and navigating **BPS ethical guidelines** is essential for Psychology students. We provide specialized support for **quantitative (SPSS/R)** and **qualitative (Thematic Analysis)** research, ensuring your case studies and lab reports meet rigorous scientific standards."
+            };
+        } else if (normalizedSubject.includes('engineering')) {
+            return {
+                icon: <Settings className="text-primary" size={32} />,
+                title: "Technical Accuracy & Standards",
+                text: "Precision is non-negotiable in Engineering. Our experts assist with complex calculations, **CAD designs**, and technical reports complying with **Eurocodes** or **British Standards (BSI)**. We ensure your designs and analysis (FEA/CFD) are technically sound and professionally documented."
+            };
+        } else if (normalizedSubject.includes('finance') || normalizedSubject.includes('accounting') || normalizedSubject.includes('economics')) {
+            return {
+                icon: <Wallet className="text-primary" size={32} />,
+                title: "Financial Modeling & Standards",
+                text: "Staying compliant with **IFRS** or **UK GAAP** is critical for Finance assignments. We provide expert help with complex **financial modeling**, **auditing procedures**, and econometrics. Our team ensures your data analysis is accurate and your interpretations follow current professional standards."
+            };
+        } else if (normalizedSubject.includes('sociology') || normalizedSubject.includes('social work') || normalizedSubject.includes('criminology')) {
+            return {
+                icon: <Users className="text-primary" size={32} />,
+                title: "Critical Theory & Social Policy",
+                text: "Sociology requires a deep understanding of **Critical Race Theory**, **Feminism**, and **Modern Social Policy**. We help you apply diverse theoretical frameworks to modern social issues, ensuring your analysis is nuanced and reflects the latest UK legislative changes in Social Work and Criminology."
             };
         } else {
             return {

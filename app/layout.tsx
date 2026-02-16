@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import GoogleAnalytics from '@/app/components/GoogleAnalytics'
 import FloatingWhatsApp from '@/app/components/FloatingWhatsApp'
+import FooterLinks from '@/app/components/FooterLinks'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://assignment-writing.com'),
@@ -89,6 +90,7 @@ export default function RootLayout({
                 </ul>
               </div>
             </div>
+            <FooterLinks />
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '2.5rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
               <p>&copy; {new Date().getFullYear()} AssignUK Mastery. All assignments are model papers intended for research purposes. Registered in England & Wales.</p>
             </div>

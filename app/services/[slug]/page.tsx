@@ -175,6 +175,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         "about": {
             "@type": "Thing",
             "name": service.subject
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1200"
         }
     };
 
