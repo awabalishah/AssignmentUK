@@ -66,6 +66,16 @@ export const AcademicStyle = {
             "advanced micro and macro economic modeling",
             "econometric analysis using industry-standard statistical tools",
             "critical evaluation of global and domestic economic policies"
+        ],
+        statistics: [
+            "robust statistical inference and hypothesis testing",
+            "advanced data visualization and interpretation for academic reports",
+            "comprehensive SPSS and R-based data analysis support"
+        ],
+        marketing: [
+            "strategic consumer behavior analysis and market segmentation",
+            "comprehensive digital marketing strategy development",
+            "data-driven brand equity and performance metrics evaluation"
         ]
     },
 

@@ -291,10 +291,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 required by your department.
                             </p>
                             <p className="mb-2">
-                                {service.subject.toLowerCase().includes('law') && AcademicStyle.subjectNuance.law[service.slug.length % 3]}
-                                {service.subject.toLowerCase().includes('nursing') && AcademicStyle.subjectNuance.nursing[service.slug.length % 3]}
-                                {(service.subject.toLowerCase().includes('business') || service.subject.toLowerCase().includes('mba')) && AcademicStyle.subjectNuance.business[service.slug.length % 3]}
-                                {service.subject.toLowerCase().includes('computer') && AcademicStyle.subjectNuance.cs[service.slug.length % 3]}
+                                {(() => {
+                                    const sub = service.subject.toLowerCase();
+                                    const key = sub.includes('law') ? 'law' :
+                                        sub.includes('nursing') ? 'nursing' :
+                                            (sub.includes('business') || sub.includes('mba') || sub.includes('marketing')) ? 'business-writing' :
+                                                (sub.includes('computer') || sub.includes('programming')) ? 'programming' :
+                                                    sub.includes('economics') ? 'economics' :
+                                                        sub.includes('psychology') ? 'psychology' :
+                                                            sub.includes('engineering') ? 'engineering' :
+                                                                (sub.includes('finance') || sub.includes('accounting')) ? 'finance' :
+                                                                    sub.includes('sociology') ? 'sociology' : null;
+
+                                    if (key && AcademicStyle.subjectNuance[key as keyof typeof AcademicStyle.subjectNuance]) {
+                                        return AcademicStyle.subjectNuance[key as keyof typeof AcademicStyle.subjectNuance][service.slug.length % 3];
+                                    }
+                                    return "Technical academic support tailored to your specific module outcomes and university marking rubrics.";
+                                })()}
                             </p>
                             <p>
                                 Whether you're working on <span className="italic">{service.modules.join(' or ')}</span>,
