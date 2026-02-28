@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://assignment-writing.com',
     siteName: 'AssignUK',
+  },
+  icons: {
+    icon: '/icon.png',
   }
 }
 
