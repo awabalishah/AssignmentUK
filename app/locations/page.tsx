@@ -6,6 +6,9 @@ import Breadcrumbs from '@/app/components/Breadcrumbs'
 export const metadata = {
     title: 'Student Service Directory | Academic Hubs in the UK',
     description: 'Explore our complete network of UK academic hubs. Specialized assignment help and university support available in every major city across England, Scotland, Wales, and Northern Ireland.',
+    alternates: {
+        canonical: 'https://assignment-writing.com/locations'
+    }
 }
 
 export default function LocationsPage() {
@@ -26,7 +29,7 @@ export default function LocationsPage() {
                     <div className="text-center mb-4 animate-fade-in">
                         <span className="text-sm font-bold text-gradient-gold uppercase tracking-widest">Global Network • Local Expertise</span>
                         <h1 className="text-5xl md:text-6xl mb-2">Our UK Academic <span className="text-gradient-gold">Directory</span></h1>
-                        <p className="text-lg text-muted mx-auto" style={{ maxWidth: '800px' }}>
+                        <p className="text-lg text-muted mx-auto" style={{ maxWidth: '100%' }}>
                             Providing PhD-level academic support across every major educational hub in the United Kingdom. Find your local campus or city below to get specialized assistance.
                         </p>
                     </div>

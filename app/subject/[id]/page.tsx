@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         title: `Premium ${subject.name} Assignment Help UK | Top Experts`,
         description: `Professional academic support for ${subject.name}. Vetted UK scholars ensuring ${subject.keywords.slice(0, 3).join(', ')} mastery and first-class results.`,
         alternates: {
-            canonical: `/subject/${id}`
+            canonical: `https://assignment-writing.com/subject/${id}`
         }
     }
 }
@@ -283,30 +283,57 @@ export default async function SubjectPage({ params }: { params: Promise<{ id: st
             <section className="section section-alt">
                 <div className="container">
                     <h2 className="text-3xl text-center mb-3">Supporting Students Across the UK</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3">
-                        <div className="glass-card" style={{ padding: '2rem' }}>
-                            <h4 className="mb-1">Top UK Cities</h4>
-                            <div className="flex flex-wrap" style={{ gap: '0.5rem' }}>
-                                {data.cities.slice(0, 10).map(city => (
-                                    <span key={city} className="text-xs" style={{ background: '#fff', padding: '0.3rem 0.6rem', borderRadius: '4px', border: '1px solid #eee' }}>{city}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2rem' }}>
+                        <div className="glass-card" style={{ padding: '2.5rem' }}>
+                            <h4 className="mb-2">Top UK Cities for {subject.name}</h4>
+                            <div className="flex flex-wrap" style={{ gap: '0.75rem' }}>
+                                {data.cities.slice(0, 15).map(city => (
+                                    <div key={city} className="flex flex-col gap-1">
+                                        <Link
+                                            href={`/${subject.id}-assignment-help-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                                            className="text-[10px] font-bold px-2 py-1 rounded bg-white border border-slate-200 hover:border-secondary hover:text-secondary transition-all"
+                                        >
+                                            {city} Assignment
+                                        </Link>
+                                        <Link
+                                            href={`/${subject.id}-dissertation-writing-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                                            className="text-[10px] font-bold px-2 py-1 rounded bg-white border border-slate-100 hover:border-secondary hover:text-secondary transition-all opacity-80"
+                                        >
+                                            {city} Dissertation
+                                        </Link>
+                                    </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="glass-card" style={{ padding: '2rem' }}>
-                            <h4 className="mb-1">Target Universities</h4>
-                            <div className="flex flex-wrap" style={{ gap: '0.5rem' }}>
-                                {data.universities.slice(0, 5).map(uni => (
-                                    <span key={uni} className="text-xs" style={{ background: '#fff', padding: '0.3rem 0.6rem', borderRadius: '4px', border: '1px solid #eee' }}>{uni}</span>
+                        <div className="glass-card" style={{ padding: '2.5rem' }}>
+                            <h4 className="mb-2">Target Universities</h4>
+                            <div className="flex flex-wrap" style={{ gap: '0.75rem' }}>
+                                {data.universities.slice(0, 8).map(uni => (
+                                    <Link
+                                        key={uni}
+                                        href={`/uni/${uni.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                                        className="text-xs font-bold px-3 py-1.5 rounded bg-white border border-slate-200 hover:border-secondary transition-all"
+                                    >
+                                        {uni}
+                                    </Link>
                                 ))}
                             </div>
                         </div>
-                        <div className="glass-card" style={{ padding: '2rem' }}>
-                            <h4 className="mb-1">2025 Standards</h4>
-                            <p className="text-xs">All our {subject.name} experts are updated with the latest 2024/2025 {AcademicStyle.terms.grading} rubrics used by Russell Group universities to ensure {AcademicStyle.firstClass} results.</p>
+                        <div className="glass-card" style={{ padding: '2.5rem' }}>
+                            <h4 className="mb-2">2025 Standards</h4>
+                            <p className="text-xs leading-relaxed">
+                                All our {subject.name} experts are updated with the latest 2024/2025 {AcademicStyle.terms.grading} rubrics used by Russell Group universities to ensure {AcademicStyle.firstClass} results across all UK campuses.
+                            </p>
+                            <div style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid #eee' }}>
+                                <Link href="/locations" className="text-sm font-bold text-secondary flex items-center gap-1">
+                                    View Full Network Directory <ChevronRight size={14} />
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             {/* FAQ Section */}
             <section className="section" style={{ borderTop: '1px solid #eee' }}>
                 <div className="container" style={{ maxWidth: '800px' }}>

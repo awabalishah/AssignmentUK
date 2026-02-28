@@ -10,23 +10,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/uni/${uni.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: 0.7,
+        priority: 0.8,
     }))
 
-    // 2. Subject Pages
+    // 2. Subject Hub Pages (Medium-High Priority)
     const subjectUrls = pseoData.subjects.map((subject) => ({
         url: `${baseUrl}/subject/${subject.id}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: 0.7,
+        priority: 0.8,
     }))
 
-    // 3. City Pages
+    // 3. City Hub Pages (Medium Priority)
     const cityUrls = pseoData.cities.map((city) => ({
-        url: `${baseUrl}/city/${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
+        url: `${baseUrl}/city/${city.toLowerCase()}`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
-        priority: 0.8,
+        priority: 0.7,
     }))
 
     // 4. New pSEO Service Pages
@@ -38,17 +38,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
     // 5. Subject + City combinations (PSEO)
-    const pseoUrls: any[] = []
-    pseoData.subjects.forEach(subject => {
-        pseoData.cities.forEach(city => {
-            pseoUrls.push({
-                url: `${baseUrl}/${subject.id}-assignment-help-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
+    // Individual pSEO help pages (Lower Priority to prevent crawl budget waste)
+    // Now handles Subjects * Cities * ServiceTypes variations
+    const pseoUrls = pseoData.subjects.flatMap(sub =>
+        pseoData.cities.flatMap(city =>
+            (pseoData.serviceTypes || ["Assignment Help"]).map(st => ({
+                url: `${baseUrl}/${sub.id}-${st.toLowerCase().replace(/ /g, '-')}-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`,
                 lastModified: new Date(),
                 changeFrequency: 'monthly' as const,
-                priority: 0.6,
-            })
-        })
-    })
+                priority: 0.5,
+            }))
+        )
+    )
 
     // 6. Authors
     const authorUrls = [

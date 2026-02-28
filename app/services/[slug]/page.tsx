@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: metaTemplates[slug.length % 4],
         description: `${service.description} Dedicated PhD writers familiar with ${service.university} standards. Optimized for ${service.referencing} referencing and high-intent modules.`,
         alternates: {
-            canonical: `/services/${service.slug}`
+            canonical: `https://assignment-writing.com/services/${service.slug}`
         }
     }
 }
@@ -318,7 +318,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                                 Whether you're working on <span className="italic">{service.modules.join(' or ')}</span>,
                                 our writers provide the depth of analysis and clarity of argument needed to secure {AcademicStyle.firstClass} {AcademicStyle.marks} in {service.city}.
                                 <br /><br />
-                                <span className="text-xs text-muted italic">{AcademicStyle.regionalContext[service.slug.length % 3]}</span>
+                                <span className="text-xs text-muted italic">{AcademicStyle.regionalContext[service.slug.length % AcademicStyle.regionalContext.length]}</span>
                             </p>
                         </div>
                         <div style={{ background: '#fff', padding: '3.5rem', borderRadius: '24px', border: '1px solid #E2E8F0', boxShadow: 'var(--shadow-premium)' }}>

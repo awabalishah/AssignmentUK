@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
         title: `Expert Assignment Help in ${realCity} | UK Academic Writers`,
         description: `Struggling with assignments in ${realCity}? Get professional support for all UK universities in ${realCity}. 100% plagiarism-free, specialized local tutors, and on-time delivery.`,
         alternates: {
-            canonical: `/city/${city}`
+            canonical: `https://assignment-writing.com/city/${city}`
         }
     }
 }
@@ -104,7 +104,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                             <p className="text-lg text-muted mb-3" style={{ lineHeight: '1.8' }}>
                                 Connecting students across <span className="font-bold text-primary">{realCity}</span> with elite academic scholars. Specialized support for every major institution in the area.
                                 <br />
-                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[city.length % 3]}</span>
+                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[city.length % AcademicStyle.regionalContext.length]}</span>
                             </p>
                             <div className="flex" style={{ gap: '1.25rem' }}>
                                 <TrackedLink

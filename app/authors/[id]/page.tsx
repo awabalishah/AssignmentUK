@@ -3,6 +3,21 @@ import authorsData from '@/data/authors.json'
 import ExpertProfile from '@/app/components/ExpertProfile'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 
+import { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params;
+    const author = (authorsData as any[]).find((a) => a.id === id);
+
+    return {
+        title: `${author?.name} - Academic Specialist | AssignUK`,
+        description: `${author?.name} is a senior academic scholar specializing in ${author?.specialties?.join(', ')}. Expert support for UK students.`,
+        alternates: {
+            canonical: `https://assignment-writing.com/authors/${id}`
+        }
+    }
+}
+
 export async function generateStaticParams() {
     return (authorsData as any[]).map((author) => ({
         id: author.id,

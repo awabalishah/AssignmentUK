@@ -48,7 +48,17 @@
     "Middlesbrough",
     "Carlisle",
     "Dundee",
-    "Newport"
+    "Newport",
+    "Salford",
+    "Chester",
+    "Bangor",
+    "Aberystwyth",
+    "Worcester",
+    "Gloucester",
+    "Winchester",
+    "Falmouth",
+    "Wrexham",
+    "Inverness"
   ],
   "universities": [
     "University of Oxford",
@@ -114,7 +124,22 @@
     "Bournemouth University",
     "University of Huddersfield",
     "University of Bolton",
-    "Teesside University"
+    "Teesside University",
+    "University of Salford",
+    "University of Chester",
+    "Bangor University",
+    "Aberystwyth University",
+    "University of Worcester",
+    "University of Gloucester",
+    "University of Winchester",
+    "Falmouth University",
+    "Wrexham University",
+    "University of the Highlands and Islands"
+  ],
+  "serviceTypes": [
+    "Assignment Help",
+    "Dissertation Writing",
+    "Essay Writing"
   ],
   "subjects": [
     {
@@ -248,6 +273,116 @@
         "Community Practice"
       ],
       "description": "Comprehensive sociology and social work assignment help, focusing on critical theory application and UK policy frameworks."
+    },
+    {
+      "id": "pharmacy",
+      "name": "Pharmacy",
+      "keywords": [
+        "Clinical Pharmacy",
+        "Pharmacokinetics",
+        "Medicinal Chemistry",
+        "Drug Interactions"
+      ],
+      "description": "Technical pharmacy assignment support covering clinical pharmacy standards and pharmacological research."
+    },
+    {
+      "id": "education",
+      "name": "Education & Teaching",
+      "keywords": [
+        "Pedagogy",
+        "Curriculum Design",
+        "Special Needs Education",
+        "Educational Psychology"
+      ],
+      "description": "Expert support for Education students, focusing on teaching methodologies and UK school standards."
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "keywords": [
+        "Urban Design",
+        "Structural Systems",
+        "Sustainable Architecture",
+        "BIM Implementation"
+      ],
+      "description": "Bespoke architecture assignment help including design analysis, structural reports, and urban planning."
+    },
+    {
+      "id": "hrm",
+      "name": "Human Resource Management",
+      "keywords": [
+        "Employee Relations",
+        "Organizational Culture",
+        "Strategic Recruitment",
+        "Talent Management"
+      ],
+      "description": "Professional HRM academic support, covering UK employment law and strategic workforce planning."
+    },
+    {
+      "id": "media-studies",
+      "name": "Media & Communications",
+      "keywords": [
+        "Digital Media",
+        "Journalism Ethics",
+        "Media Theory",
+        "Communication Patterns"
+      ],
+      "description": "Creative and analytical support for Media Studies students, specializing in digital communication trends."
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "keywords": [
+        "Modern History",
+        "Political History",
+        "Social Movements",
+        "Historiography"
+      ],
+      "description": "Academic history writing services featuring deep archival research and critical historiographical analysis."
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "keywords": [
+        "Ethics",
+        "Metaphysics",
+        "Epistemology",
+        "Political Philosophy"
+      ],
+      "description": "Analytical philosophy assignment help, focusing on rigorous logical argumentation and classical thought."
+    },
+    {
+      "id": "biomedical-science",
+      "name": "Biomedical Science",
+      "keywords": [
+        "Molecular Biology",
+        "Pathology",
+        "Haematology",
+        "Genetic Engineering"
+      ],
+      "description": "Laboratory-grade biomedical science support for advanced university research and clinical reporting."
+    },
+    {
+      "id": "politics",
+      "name": "Politics & International Relations",
+      "keywords": [
+        "Geopolitics",
+        "Political Theory",
+        "Global Governance",
+        "Public Policy"
+      ],
+      "description": "Strategic insights into political science and international relations for premium university-level assignments."
+    },
+    {
+      "id": "sports-science",
+      "name": "Sports Science",
+      "keywords": [
+        "Kinesiology",
+        "Exercise Physiology",
+        "Sports Psychology",
+        "Performance Analysis"
+      ],
+      "description": "Data-driven sports science academic support, covering athletic performance and healthcare in sports."
     }
   ]
 }

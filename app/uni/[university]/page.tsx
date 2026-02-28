@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ universit
         title: `Expert Assignment Help at ${realUni} | UK Writers`,
         description: `Get professional academic support for all modules at ${realUni}. 100% plagiarism-free, on-time delivery, and specialized for ${realUni} grading standards.`,
         alternates: {
-            canonical: `/uni/${university}`
+            canonical: `https://assignment-writing.com/uni/${university}`
         }
     }
 }
@@ -190,7 +190,7 @@ export default async function UniversityPage({ params }: { params: Promise<{ uni
                             <p className="text-lg text-muted mb-3" style={{ lineHeight: '1.8' }}>
                                 Get specialized assignment help and exam preparation designed specifically for <span className="font-bold text-primary">{realUni}</span> graduation standards and {AcademicStyle.terms.grading} rubrics.
                                 <br />
-                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[university.length % 3]}</span>
+                                <span className="text-sm italic font-medium">{AcademicStyle.regionalContext[university.length % AcademicStyle.regionalContext.length]}</span>
                             </p>
                             <div className="flex" style={{ gap: '1.25rem' }}>
                                 <TrackedLink

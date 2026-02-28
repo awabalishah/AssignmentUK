@@ -18,10 +18,15 @@ type Props = {
 
 export async function generateStaticParams() {
     const paths: any[] = []
+    const serviceTypes = (data as any).serviceTypes || ["Assignment Help"]
+
     data.subjects.forEach(subject => {
         data.cities.forEach(city => {
-            paths.push({
-                slug: `${subject.id}-assignment-help-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`
+            serviceTypes.forEach((st: string) => {
+                const serviceSlug = st.toLowerCase().replace(/ /g, '-')
+                paths.push({
+                    slug: `${subject.id}-${serviceSlug}-${city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`
+                })
             })
         })
     })
@@ -30,28 +35,37 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params
-    const [subjectId, ...rest] = slug.split('-assignment-help-')
+    const serviceTypes = (data as any).serviceTypes || ["Assignment Help"]
+
+    // Find matching service type from slug
+    const matchedST = serviceTypes.find((st: string) => slug.includes(`-${st.toLowerCase().replace(/ /g, '-')}-`)) || "Assignment Help"
+    const serviceSlugPart = `-${matchedST.toLowerCase().replace(/ /g, '-')}-`
+
+    const [subjectId, ...rest] = slug.split(serviceSlugPart)
     const city = rest.join(' ').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
     const subject = data.subjects.find(s => s.id === subjectId)
 
     return {
-        title: `${subject?.name} Assignment Help in ${city} | #1 UK Service`,
-        description: `Leading ${subject?.name} assignment writing service in ${city}. Trusted by students at top UK universities for plagiarism-free work.`,
+        title: `${subject?.name} ${matchedST} in ${city} | #1 UK Service`,
+        description: `Premium ${subject?.name} ${matchedST.toLowerCase()} in ${city}. Trusted by students at top UK universities for plagiarism-free work.`,
         alternates: {
-            canonical: `/${slug}`
+            canonical: `https://assignment-writing.com/${slug}`
         }
     }
 }
 
 export default async function PSEOPage({ params }: Props) {
     const { slug } = await params
+    const serviceTypes = (data as any).serviceTypes || ["Assignment Help"]
 
-    // Strict pattern matching for [subject]-assignment-help-[city]
-    if (!slug.includes('-assignment-help-')) {
+    // Find matching service type from slug
+    const matchedST = serviceTypes.find((st: string) => slug.includes(`-${st.toLowerCase().replace(/ /g, '-')}-`))
+    if (!matchedST) {
         return notFound()
     }
 
-    const [subjectId, ...rest] = slug.split('-assignment-help-')
+    const serviceSlugPart = `-${matchedST.toLowerCase().replace(/ /g, '-')}-`
+    const [subjectId, ...rest] = slug.split(serviceSlugPart)
     const citySlug = rest.join('-')
     const city = citySlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
     const subject = data.subjects.find(s => s.id === subjectId)
@@ -199,6 +213,12 @@ export default async function PSEOPage({ params }: Props) {
     const relatedInCity = (servicesData as any[])
         .filter(s => s.city === city);
 
+    // Find universities in this city for better uniqueness
+    const localUniversities = data.universities.filter(u => {
+        // Simple heuristic: check if city name is in university name
+        return u.toLowerCase().includes(city.toLowerCase());
+    });
+
     return (
         <main>
             <script
@@ -235,13 +255,13 @@ export default async function PSEOPage({ params }: Props) {
                                 <GraduationCap size={20} />
                                 <span className="text-xs font-bold uppercase tracking-wider">UK Academic Support</span>
                             </div>
-                            <h1 className="text-4xl md:text-5xl mb-1">{subject.name} Assignment Help in {city}</h1>
+                            <h1 className="text-4xl md:text-5xl mb-1">{subject.name} {matchedST} in {city}</h1>
                             <div className="flex items-center mb-2" style={{ gap: '0.5rem', opacity: 0.8 }}>
                                 <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 'bold', color: '#fff' }}>UK</div>
                                 <span className="text-xs">Verified by <strong>{currentAuthor.name}</strong> (Lead Reviewer, {city} Region)</span>
                             </div>
                             <p className="text-lg text-muted mb-3">
-                                Professional assistance for your {subject.name} assignments in {city}. Our experts ensure your work meets the exact criteria set by local tutors.
+                                Professional assistance for your {subject.name} {matchedST.toLowerCase() === 'assignment help' ? 'assignments' : matchedST.toLowerCase()} in {city}. Our experts ensure your work meets the exact criteria set by local tutors in the {city} area.
                             </p>
                             <div className="flex" style={{ gap: '1rem' }}>
                                 <TrackedLink
@@ -303,27 +323,45 @@ export default async function PSEOPage({ params }: Props) {
                         <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2rem' }}>
                             <div>
                                 <h4 className="text-lg mb-1 font-bold">Local Standards</h4>
-                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[0]} We focus on the specific marking criteria prevalent across {city}&apos;s higher education institutions.</p>
+                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[slug.length % AcademicStyle.regionalContext.length]} We focus on the specific marking criteria prevalent across {city}&apos;s higher education institutions.</p>
                             </div>
                             <div>
                                 <h4 className="text-lg mb-1 font-bold">Expert Insights</h4>
-                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[1]} This ensures your {subject.name} assignment resonates with local academic expectations.</p>
+                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[(slug.length + 1) % AcademicStyle.regionalContext.length]} This ensures your {subject.name} assignment resonates with local academic expectations.</p>
                             </div>
                             <div>
                                 <h4 className="text-lg mb-1 font-bold">University Hub</h4>
-                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[2]} Our support is designed for students seeking top-tier results in the {city} area.</p>
+                                <p className="text-sm text-muted">{AcademicStyle.regionalContext[(slug.length + 2) % AcademicStyle.regionalContext.length]} Our support is designed for students seeking top-tier results in the {city} area.</p>
                             </div>
                         </div>
+
+                        {localUniversities.length > 0 && (
+                            <div style={{ marginTop: '3rem', paddingTop: '3rem', borderTop: '1px solid #eee' }}>
+                                <h4 className="text-sm font-bold uppercase tracking-widest text-muted mb-2">Supported Institutions in {city}:</h4>
+                                <div className="flex flex-wrap" style={{ gap: '1rem' }}>
+                                    {localUniversities.map(uni => (
+                                        <Link
+                                            key={uni}
+                                            href={`/uni/${uni.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                                            className="text-xs font-bold px-3 py-1 rounded-full bg-slate-50 border border-slate-200 hover:border-secondary transition-colors"
+                                        >
+                                            {uni}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </section>
+
 
             {/* Subject Specific Technical Depth */}
             <section className="section section-alt">
                 <div className="container">
                     <h2 className="text-3xl mb-3 text-center">Technical Depth in {subject.name}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '2rem' }}>
-                        {AcademicStyle.subjectNuance[subject.id as keyof typeof AcademicStyle.subjectNuance]?.map((nuance, i) => (
+                        {AcademicStyle.subjectNuance[subject.id as keyof typeof AcademicStyle.subjectNuance]?.slice(0, 4).map((nuance, i) => (
                             <div key={i} className="flex items-start" style={{ gap: '1rem' }}>
                                 <div style={{ background: 'var(--primary)', color: '#fff', padding: '0.5rem', borderRadius: '50%', flexShrink: 0 }}>
                                     <CheckCircle2 size={16} />
